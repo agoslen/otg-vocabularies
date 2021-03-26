@@ -1,0 +1,291 @@
+@prefix : <https://onthesegrounds.org/vocab#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix rel: <http://purl.org/vocab/relationship> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#
+# Core Properties
+#
+:title a rdf:Property; = dcterms:title ;
+    rdfs:label "Title"@en ;
+    rdfs:comment "Descriptive title of the event that usually includes the date, the participant, and event type."@en .
+
+:description a rdf:Property; = dcterms:description ;
+    rdfs:label "Description"@en ;
+    rdfs:comment "Narrative description or transcription of event from document."@en .
+
+:type a rdf:Property; = dcterms:type ;
+    rdfs:label "Event Type"@en ;
+    rdfs:comment "The kind of event being described."@en ;
+    rdfs:range :EventType .
+
+:keywords a rdf:Property; = schema:keywords ;
+    rdfs:label "Keywords"@en ;
+    rdfs:comment "Keywords to further specify the type of event."@en .
+
+:actionStatus a rdf:Property; = schema:actionStatus ;
+    rdfs:label "Action Status"@en ;
+    rdfs:comment "An indicator of the completion status of an event."@en ;
+    rdfs:range :ActionStatus .
+
+:date a rdf:Property; = dcterms:date ;
+    rdfs:label "Date"@en ;
+    rdfs:comment "Date of event being described."@en .
+
+:dateCertainty a rdfs:Property ;
+    rdfs:label "Date Certainty"@en ;
+    rdfs:comment "An indicator of the confidence certainty of the date."@en .
+    rdfs:range :Certainty .
+
+:location a rdf:Property; = schema:location ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "The location of the event being described. Can be general."@en .
+
+:cause a rdf:Property; = bio:IntiatingEvent ;
+    rdfs:label "Cause"@en ;
+    rdfs:comment "The reason precipitating the event."@en .
+
+:outome a rdf:Property; = schema:result ;
+    rdfs:label "Outcome"@en ;
+    rdfs:comment "The result produced by an event."@en .
+
+:source a rdf:Property; = dcterms:source ;
+    rdfs:label "Source"@en ;
+    rdfs:comment "The archival document from which the record information is drawn."@en .
+
+:relatedEvent a rdf:Property; = dcterms:relation ;
+    rdfs:label "Related Event"@en ;
+    rdfs:comment "An event that is related to the one being described."@en .
+
+#
+# Properties Describing the Principal Participant
+#
+:primaryParticipant a rdf:Property; = bio:principle ;
+    rdfs:label "Primary Participant"@en ;
+    rdfs:comment "The primary person who is involved in the event."@en .
+
+:freedomStatus a rdf:Property ;
+    rdfs:label "Freedom Status"@en ;
+    rdfs:comment "An indication of the freedom status of the primary participant in the event."@en ;
+    rdfs:range :FreedomStatus .
+
+:enslaver a rdf:Property ;
+    rdfs:label "Enslaver"@en ;
+    rdfs:comment "The person or institution responsible for holding in slavery the primary particpant in the event."@en .
+
+:age a rdf:Property = bio:age ;
+    rdfs:label "Age"@en;
+    rdfs:comment "The age of the primary participant."@en .
+
+#
+# Properties Describing Other Participants
+#
+:author a rdf:Property = schema:author ;
+    rdfs:label "Author"@en ;
+    rdfs:comment "The person who created the record of the event."@en .
+
+:participant a rdf:Property = bio:participant
+    rdfs:lable "Additional Participant"@en ;
+    rdfs:comment "A participant in the event other than the principal participant."@en .
+
+:witness a rdf:Property = bio:witness ;
+    rdfs:label "Witness"@en ;
+    rdfs:comment "A person that witnesses and can bear testimony to the occurrence of an event."@en .
+
+:officiator a rdf:Property = bio:officiator ;
+    rdfs:label "Officiator"@en ;
+    rdfs:comment "A person that officiates at an event."@en .
+
+:buyer a rdf:Property = schema:buyer ;
+    rdfs:label "Buyer"@en ;
+    rdfs:comment "The purchaser in a transaction."@en .
+
+:seller a rdf:Property = schema:seller ;
+    rdfs:label "Seller"@en ;
+    rdfs:comment "The seller in a transaction."@en .
+
+:leaser a rdf:Property ;
+    rdfs:label "Leaser"@en ;
+    rdfs:comment "The person or organization leasing enslaved labor."@en .
+
+:perpetrator a rdf:Property ;
+    rdfs:label "Perpetrator"@en ;
+    rdfs:comment "The person enacting violence."@en .
+
+:permissionFrom a rdf:Property ;
+    rdfs:label "Permission From"@en ;
+    rdfs:comment "The person granting permission for the subject to act."@en .
+
+:organization a rdf:Property = bio:organization ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "An organization that plays a role in an event."@en .
+
+#
+# Properties Describing Transactions
+#
+:duration a rdf:Property = schema:duration ;
+    rdfs:label "Duration"@en ;
+    rdfs:comment "The length of the lease, rental, or term of enslavement before manumission in sales contract."@en.
+
+:currency a rdf:Property = schema:currency ;
+    rdfs:label "Currency"@en ;
+    rdfs:comment "The currency in which the monetary amount is expressed."@en .
+
+:price a rdf:Property = schema:price ;
+    rdfs:label "Price"@en ;
+    rdfs:comment "The numeric representation of the price or evaluation for a transaction."@en .
+
+:priceComponent a rdf:Property = schema:priceComponent ;
+    rdfs:label "Price Component"@en ;
+    rdfs:comment "Indication of combined elements in a commercial transaction."@en .
+
+:priceSpecification a rdf:Property = schema:priceSpecification ;
+    rdfs:label "Price Specification"@en ;
+    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en .
+
+:typeOfGood a rdf:Property = schema:typeOfGood ;
+    rdfs:label "Good or Service"@en ;
+    rdfs:comment "Materials involved in a commercial transaction."@en .
+
+:taskPerformed a rdf:Property ;
+    rdfs:label "Task Performed"@en ;
+    rdfs:comment "The type of work performed."@en .
+
+:contractTerms a rdf:Property ;
+    rdfs:label "Contract Terms"@en ;
+    rdfs:comment "The terms of a legal or employment contract."@en .
+
+:exchangedFor a rdf:Property ;
+    rdfs:label "Exchanged For"@en ;
+    rdfs:comment "The goods or services exchanged in transaction. Might be used in lieu of monetary payment."@en .
+    
+#
+# Properties Describing Travel or Transfer
+#
+:toLocation a rdf:Property = schema:toLocation ;
+    rdfs:label "Destination"@en ;
+    rdfs:comment "The point of completion for a travel event."@en .
+
+:fromLocation a rdf:Property = schema:fromLocation ;
+    rdfs:label "Origin"@en ;
+    rdfs:comment "The point of origin for a travel event."@en .
+
+#
+# Properties Describing Health-related Events
+#
+:signOrSymptom a rdf:Property = schema:signOrSymptom ;
+    rdfs:label "Symptom"@en ;
+    rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition."@en .
+
+:possibleTreatment a rdf:Property = schema:possibleTreatment ;
+    rdfs:label "Treatment"@en ;
+    rdfs:comment "A possible treatment to address this condition, sign or symptom."@en .
+
+#
+# Properties Describing Legal Events
+#
+:petitionerAgainst a rdf:Property ; 
+    rdfs:label "Petitioner"@en ;
+    rdfs:comment "The petitioner against in a legal case."@en .
+
+:defendantAgainst a rdf:Property ;
+    rdfs:label "Defendant"@en ;
+    rdfs:comment "The defendant against in a legal case."@en .
+    
+:attorneyFor a rdf:Property ;
+    rdfs:label "Attorney For"@en ;
+    rdfs:comment "The attorney for the subject in a legal case."@en .
+    
+:attorneyAgainst a rdf:Property ;
+    rdfs:label "Attorney Against"@en ;
+    rdfs:comment "The attorney opposing the subject in a legal case."@en .
+
+:judge a rdf:Property ;
+    rdfs:label "Judge"@en ;
+    rdfs:comment "The judge in a legal case."@en .
+    
+    
+#
+# Classes 
+#
+:CommercialTransactionEvent a rdfs:Class ;
+    rdfs:label "Commercial Transaction Event"@en ;
+    rdfs:comment "An event in which an enslaved person is involved in the purchase, sale, or exchange of goods or services."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:EducationEvent a rdfs:Class ;
+    rdfs:label "Education Event"@en ;
+    rdfs:comment "An event in which an enslaved person is learning in some way, formal or informal."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:EnslavedStatusEvent a rdfs:Class ;
+    rdfs:label "Ensalved Status Event"@en ;
+    rdfs:comment "An event related to a person's status of enslavement or freedom, including change of ownership or manumission."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:HealthEvent a rdfs:Class ;
+    rdfs:label "Health Event"@en ;
+    rdfs:comment "An event related to the illness, injury, or bodily condition of an enslaved person."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:InventoryEvent a rdfs:Class ;
+    rdfs:label "Inventory Event"@en ;
+    rdfs:comment "An event in which an enslaved person is included in a list by their enslaver, or other representative authority."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:LaborEvent a rdfs:Class ;
+    rdfs:label "Labor Event"@en ;
+    rdfs:comment "An event in which an enslaved person works at the behest of their enslaver or as a person hired out to another person or entity."@en ;
+    rdfs:subClassOf dctype:Event .
+
+:LegalEvent a rdfs:Class ;
+    rdfs:label "Legal Event"@en ;
+    rdfs:comment "An event in which an enslaved person is involved in a legal proceeding."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:LifeCourseEvent a rdfs:Class ;
+    rdfs:label "Life Course Event"@en ;
+    rdfs:comment "An event related to a major social or cultural milestone in a person's life."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:MembershipOrParticipationEvent a rdfs:Class ;
+    rdfs:label "Membership of Participation Event"@en ;
+    rdfs:comment "An event in which an enslaved person joins a group."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:NarrativeEvent a rdfs:Class ;
+    rdfs:label "Narrative Event"@en ;
+    rdfs:comment "An event in which an enslaved person relays or records the story of their life."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ProvisionEvent a rdfs:Class ;
+    rdfs:label "Provision Event"@en ;
+    rdfs:comment "An event related to securing or providing food, clothing, housing, or other necessities for an enslaved person."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ReligiousEvent a rdfs:Class ;
+    rdfs:label "Religious or Sacramental Event"@en ;
+    rdfs:comment "An event that is relgious in nature, including sacraments, rituals, and occasions of worship."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ResistanceEvent a rdfs:Class ;
+    rdfs:label "Resistance Event"@en ;
+    rdfs:comment "An event in which an enslaved person resists the status and/or conditions of enslavement."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:TravelEvent a rdfs:Class ;
+    rdfs:label "Travel Event"@en ;
+    rdfs:comment "An event in which an enslaved person moves from one geographical location to another."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ViolenceEvent a rdfs:Class ;
+    rdfs:label "Violence Event"@en ;
+    rdfs:comment "An event that involves a physical altercation."@en ;
+    rdfs:subClassOf dctype:Event .
+

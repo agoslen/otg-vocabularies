@@ -1,0 +1,583 @@
+@prefix otgevents: <https://onthesegrounds.org/vocab/event-types/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<https://onthesegrounds.org/vocab/event-types/> rdf:type skos:ConceptScheme;
+    dcterms:title "Event Type Vocabulary"@en ;
+    dcterms:description "A controlled vocabulary to describe the lived experiences of enslaved people who labored for colleges or universities."@en ;
+    skos:hasTopConcept otgevents:eventType.
+
+otgevents:eventType rdf:type skos:Collection ;
+    skos:prefLabel "Event Type"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:topConceptOf <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:commercialTransactionEvents ;
+    skos:member otgevents:educationEvents ;
+    skos:member otgevents:freedomStatusEvents ;
+    skos:member otgevents:healthEvents ;
+    skos:member otgevents:inventoryEvents ;
+    skos:member otgevents:laborEvents ;
+    skos:member otgevents:legalEvents ;
+    skos:member otgevents:lifeCourseEvents ;
+    skos:member otgevents:membershipEvents ;
+    skos:member otgevents:narrativeEvents ;
+    skos:member otgevents:provisionEvents ;
+    skos:member otgevents:religionEvents ;
+    skos:member otgevents:resistanceEvents ;
+    skos:member otgevents:travelEvents ;
+    skos:member otgevents:violenceEvents .
+
+
+otgevents:commercialTransactionEvents rdf:type skos:Collection;
+    skos:prefLabel "Commercial Transaction Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:commercialTransaction;
+    skos:member otgevents:enslavedHire;
+    skos:member otgevents:enslavedLoan;
+    skos:member otgevents:enslavedRental;
+    skos:member otgevents:services;
+    skos:member otgevents:smallGoods.
+
+otgevents:commercialTransaction rdf:type skos:Concept;
+    skos:prefLabel "Commercial Transaction"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:enslavedHire rdf:type skos:Concept;
+    skos:prefLabel "Enslaved Hire"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+otgevents:enslavedLoan rdf:type skos:Concept;
+    skos:prefLabel "Enslaved Loan"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+otgevents:enslavedRental rdf:type skos:Concept;
+    skos:prefLabel "Enslaved Rental"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+otgevents:services rdf:type skos:Concept;
+    skos:prefLabel "Services"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+otgevents:smallGoods rdf:type skos:Concept;
+    skos:prefLabel "Small Goods"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+
+otgevents:educationEvents rdf:type skos:Collection;
+    skos:prefLabel "Education Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:education.
+
+otgevents:education rdf:type skos:Concept;
+    skos:prefLabel "Education"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> .
+
+
+otgevents:freedomStatusEvents rdf:type skos:Collection;
+    skos:prefLabel "Freedom Status Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:freedomStatus;
+    skos:member otgevents:dispute;
+    skos:member otgevents:enslavement;
+    skos:member otgevents:exchange;
+    skos:member otgevents:manumission;
+    skos:member otgevents:purchase;
+    skos:member otgevents:sale;
+    skos:member otgevents:transfer.
+
+otgevents:freedomStatus rdf:type skos:Concept;
+    skos:prefLabel "Freedom Status"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:dispute rdf:type skos:Concept;
+    skos:prefLabel "Dispute"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:enslavement rdf:type skos:Concept;
+    skos:prefLabel "Enslavement"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:exchange rdf:type skos:Concept;
+    skos:prefLabel "Exchange"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:manumission rdf:type skos:Concept;
+    skos:prefLabel "Manumission"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:purchase rdf:type skos:Concept;
+    skos:prefLabel "Purchase"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:sale rdf:type skos:Concept;
+    skos:prefLabel "Sale"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:transfer rdf:type skos:Concept;
+    skos:prefLabel "Transfer"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+#
+# Do we need self-purchase? manumission with term?
+#
+
+otgevents:healthEvents rdf:type skos:Collection;
+    skos:prefLabel "Health Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:health;
+    skos:member otgevents:childbirth;
+    skos:member otgevents:illness;
+    skos:member otgevents:injury;
+    skos:member otgevents:medicalTreatment;
+    skos:member otgevents:pregnancy.
+
+otgevents:health rdf:type skos:Concept;
+    skos:prefLabel "Health"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:childbirth rdf:type skos:Concept;
+    skos:prefLabel "Childbirth"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:illness rdf:type skos:Concept;
+    skos:prefLabel "Illness"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:injury rdf:type skos:Concept;
+    skos:prefLabel "Injury"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:medicalTreatment rdf:type skos:Concept;
+    skos:prefLabel "Medical Treatment"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:pregnancy rdf:type skos:Concept;
+    skos:prefLabel "Pregnancy"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:inventoryEvents rdf:type skos:Collection;
+    skos:prefLabel "Inventory Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:inventory.
+
+otgevents:inventory rdf:type skos:Concept;
+    skos:prefLabel "Inventory"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+#
+# Do we need tax roll?
+#
+
+otgevents:laborEvents rdf:type skos:Collection;
+    skos:prefLabel "Labor Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:labor;
+    skos:member otgevents:agriculture;
+    skos:member otgevents:domestic;
+    skos:member otgevents:midwifery;
+    skos:member otgevents:skilled.
+
+otgevents:labor rdf:type skos:Concept;
+    skos:prefLabel "Labor"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:agriculture rdf:type skos:Concept;
+    skos:prefLabel "Agriculture"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:domestic rdf:type skos:Concept;
+    skos:prefLabel "Domestic"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:midwifery rdf:type skos:Concept;
+    skos:prefLabel "Midwifery"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:skilled rdf:type skos:Concept;
+    skos:prefLabel "Skilled"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:legalEvents rdf:type skos:Collection;
+    skos:prefLabel "Legal Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:legal;
+    skos:member otgevents:civilCase;
+    skos:member otgevents:criminalCase;
+    skos:member otgevents:dowry;
+    skos:member otgevents:emancipationFiling;
+    skos:member otgevents:freedomPetition;
+    skos:member otgevents:probate;
+    skos:member otgevents:taxFiling;
+    skos:member otgevents:will.
+
+otgevents:legal rdf:type skos:Concept;
+    skos:prefLabel "Legal"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:civilCase rdf:type skos:Concept;
+    skos:prefLabel "Civil Case"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:criminalCase rdf:type skos:Concept;
+    skos:prefLabel "Criminal Case"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:dowry rdf:type skos:Concept;
+    skos:prefLabel "Dowry"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:emancipationFiling rdf:type skos:Concept;
+    skos:prefLabel "Emancipation Filing"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:freedomPetition rdf:type skos:Concept;
+    skos:prefLabel "Freedom Petition"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:probate rdf:type skos:Concept;
+    skos:prefLabel "Probate"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:taxFiling rdf:type skos:Concept;
+    skos:prefLabel "Tax Filing"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:will rdf:type skos:Concept;
+    skos:prefLabel "Will"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:lifeCourseEvents rdf:type skos:Collection;
+    skos:prefLabel "Life Course Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:lifeCourse;
+    skos:member otgevents:birth;
+    skos:member otgevents:burial;
+    skos:member otgevents:death;
+    skos:member otgevents:marriage.
+
+otgevents:lifeCourse rdf:type skos:Concept;
+    skos:prefLabel "Life Course"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:birth rdf:type skos:Concept;
+    skos:prefLabel "Birth"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:burial rdf:type skos:Concept;
+    skos:prefLabel "Burial"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:death rdf:type skos:Concept;
+    skos:prefLabel "Death"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:marriage rdf:type skos:Concept;
+    skos:prefLabel "Marriage"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:membershipEvents rdf:type skos:Collection;
+    skos:prefLabel "Membership or Participation Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:membership;
+    skos:member otgevents:fraternalOrganization;
+    skos:member otgevents:military.
+
+otgevents:membership rdf:type skos:Concept;
+    skos:prefLabel "Membership"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:fraternalOrganization rdf:type skos:Concept;
+    skos:prefLabel "Fraternal Organization"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:military rdf:type skos:Concept;
+    skos:prefLabel "Military"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:narrativeEvents rdf:type skos:Collection;
+    skos:prefLabel "Narrative Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:narrative;
+    skos:member otgevents:autobiography;
+    skos:member otgevents:testimony.
+
+otgevents:narrative rdf:type skos:Concept;
+    skos:prefLabel "Narrative"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:autobiography rdf:type skos:Concept;
+    skos:prefLabel "Autobiography"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:testimony rdf:type skos:Concept;
+    skos:prefLabel "Testimony"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:provisionEvents rdf:type skos:Collection;
+    skos:prefLabel "Provision Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:provision;
+    skos:member otgevents:clothing;
+    skos:member otgevents:food;
+    skos:member otgevents:housing;
+    skos:member otgevents:supplies.
+
+otgevents:provision rdf:type skos:Concept;
+    skos:prefLabel "Provision"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:clothing rdf:type skos:Concept;
+    skos:prefLabel "Clothing"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:food rdf:type skos:Concept;
+    skos:prefLabel "Food"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:housing rdf:type skos:Concept;
+    skos:prefLabel "Housing"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:supplies rdf:type skos:Concept;
+    skos:prefLabel "Supplies"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:religionEvents rdf:type skos:Collection;
+    skos:prefLabel "Religious Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:religion;
+    skos:member otgevents:baptism;
+    skos:member otgevents:communion;
+    skos:member otgevents:confession;
+    skos:member otgevents:lastRites;
+    skos:member otgevents:marriageSacrament;
+    skos:member otgevents:music;
+    skos:member otgevents:ordination;
+    skos:member otgevents:preaching.
+
+otgevents:religion rdf:type skos:Concept;
+    skos:prefLabel "Religion"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:baptism rdf:type skos:Concept;
+    skos:prefLabel "Baptism"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:communion rdf:type skos:Concept;
+    skos:prefLabel "Communion"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:confession rdf:type skos:Concept;
+    skos:prefLabel "Confession"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:lastRites rdf:type skos:Concept;
+    skos:prefLabel "Last Rites"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:marriageSacrament rdf:type skos:Concept;
+    skos:prefLabel "Marriage Sacrament"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:music rdf:type skos:Concept;
+    skos:prefLabel "Music"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:ordination rdf:type skos:Concept;
+    skos:prefLabel "Ordination"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:preaching rdf:type skos:Concept;
+    skos:prefLabel "Preaching"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+#
+# Do we need Mass? or services?
+# 
+
+
+otgevents:resistanceEvents rdf:type skos:Collection;
+    skos:prefLabel "Resistance Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:resistance;
+    skos:member otgevents:appeal;
+    skos:member otgevents:defense;
+    skos:member otgevents:escapeFromJail;
+    skos:member otgevents:propertyDestruction;
+    skos:member otgevents:selfLiberation;
+    skos:member otgevents:workSlowdown.
+
+otgevents:resistance rdf:type skos:Concept;
+    skos:prefLabel "Resistance"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:appeal rdf:type skos:Concept;
+    skos:prefLabel "Appeal"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:defense rdf:type skos:Concept;
+    skos:prefLabel "Defense"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:escapeFromJail rdf:type skos:Concept;
+    skos:prefLabel "Escape From Jail"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:propertyDestruction rdf:type skos:Concept;
+    skos:prefLabel "Property Destruction"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:selfLiberation rdf:type skos:Concept;
+    skos:prefLabel "Self Liberation"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:workSlowdown rdf:type skos:Concept;
+    skos:prefLabel "Work Slowdown or Stoppage"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:travelEvents rdf:type skos:Collection;
+    skos:prefLabel "Travel Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:travel;
+    skos:member otgevents:importation;
+    skos:member otgevents:relocation;
+    skos:member otgevents:temporary.
+
+otgevents:travel rdf:type skos:Concept;
+    skos:prefLabel "Travel"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:importation rdf:type skos:Concept;
+    skos:prefLabel "Importation"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:relocation rdf:type skos:Concept;
+    skos:prefLabel "Relocation"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:temporary rdf:type skos:Concept;
+    skos:prefLabel "Temporary"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+
+otgevents:violenceEvents rdf:type skos:Collection;
+    skos:prefLabel "Violence Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/> ;
+    skos:member otgevents:violence;
+    skos:member otgevents:harassment;
+    skos:member otgevents:jailing;
+    skos:member otgevents:physicalAssault;
+    skos:member otgevents:punishment;
+    skos:member otgevents:sexualAssault.
+
+otgevents:violence rdf:type skos:Concept;
+    skos:prefLabel "Violence"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:harassment rdf:type skos:Concept;
+    skos:prefLabel "Harassment"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:jailing rdf:type skos:Concept;
+    skos:prefLabel "Jailing"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:physicalAssault rdf:type skos:Concept;
+    skos:prefLabel "Physical Assault"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:punishment rdf:type skos:Concept;
+    skos:prefLabel "Punishment"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
+
+otgevents:sexualAssault rdf:type skos:Concept;
+    skos:prefLabel "Sexual Assault"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types/>.
