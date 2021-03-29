@@ -12,100 +12,122 @@
 # Core Properties
 #
 
-dcterms:title a rdf:Property ;
+:title a rdf:Property ;
     rdfs:label "Title"@en ;
-    rdfs:comment "Descriptive title of the event that usually includes the date, the participant, and event type."@en .
+    rdfs:comment "Descriptive title of the event that usually includes the date, the participant, and event type."@en ;
+    rdfs:isDefinedBy dcterms:title .
 
-dcterms:description a rdf:Property ;
+:description a rdf:Property ;
     rdfs:label "Description"@en ;
-    rdfs:comment "Narrative description or transcription of event from document."@en .
+    rdfs:comment "Narrative description or transcription of event from document."@en ;
+    rdfs:isDefinedBy dcterms:description .
 
 dcterms:type a rdf:Property ;
     rdfs:label "Event Type"@en ;
-    rdfs:comment "The kind of event being described."@en .
+    rdfs:comment "The kind of event being described."@en ;
+    rdfs:isDefinedBy dcterms:type ;
+    rdfs:range :EventType .
     
-schema:keywords a rdf:Property ;
+:keywords a rdf:Property ;
     rdfs:label "Keywords"@en ;
-    rdfs:comment "Keywords to further specify the type of event."@en .
+    rdfs:comment "Keywords to further specify the type of event."@en ;
+    rdfs:isDefinedBy schema:keywords .
 
-schema:actionStatus a rdf:Property ;
+:actionStatus a rdf:Property ;
     rdfs:label "Action Status"@en ;
-    rdfs:comment "An indicator of the completion status of an event."@en .
+    rdfs:comment "An indicator of the completion status of an event."@en ;
+    rdfs:isDefinedBy schema:actionStatus ;
+    rdfs:range :ActionStatus .
 
-dcterms:date a rdf:Property ;
+:date a rdf:Property ;
     rdfs:label "Date"@en ;
-    rdfs:comment "Date of event being described."@en .
+    rdfs:comment "Date of event being described."@en ;
+    rdfs:isDefinedBy dcterms:date .
 
 :dateCertainty a rdf:Property ;
     rdfs:label "Date Certainty"@en ;
-    rdfs:comment "An indicator of the confidence certainty of the date."@en .
+    rdfs:comment "An indicator of the confidence certainty of the date."@en ;
+    rdfs:range :Certainty .
 
-schema:location a rdf:Property ;
+:location a rdf:Property ;
     rdfs:label "Location"@en ;
-    rdfs:comment "The location of the event being described. Can be general."@en .
+    rdfs:comment "The location of the event being described. Can be general."@en ;
+    rdfs:isDefinedBy schema:location .
 
-bio:IntiatingEvent a rdf:Property ;
+:cause a rdf:Property ;
     rdfs:label "Cause"@en ;
-    rdfs:comment "The reason precipitating the event."@en .
+    rdfs:comment "The reason precipitating the event."@en ;
+    rdfs:isDefinedBy bio:InitiatingEvent .
 
-schema:result a rdf:Property ;
+:result a rdf:Property ;
     rdfs:label "Outcome"@en ;
-    rdfs:comment "The result produced by an event."@en .
+    rdfs:comment "The result produced by an event."@en ;
+    rdfs:isDefinedBy schema:result .
 
-dcterms:source a rdf:Property ;
+:source a rdf:Property ;
     rdfs:label "Source"@en ;
-    rdfs:comment "The archival document from which the record information is drawn."@en .
+    rdfs:comment "The archival document from which the record information is drawn."@en ;
+    rdfs:isDefinedBy dcterms:source .
 
 :relatedEvent a rdf:Property ;
     rdfs:label "Related Event"@en ;
-    rdfs:comment "An event that is related to the one being described."@en ;
+    rdfs:comment "An event that is related to the one being described."@en .
     rdfs:subPropertyOf dcterms:relation.
 
 #
 # Properties Describing the Principal Participant
 #
-bio:principle a rdf:Property ;
+:principal a rdf:Property ;
     rdfs:label "Primary Participant"@en ;
-    rdfs:comment "The primary person who is involved in the event."@en .
+    rdfs:comment "The primary person who is involved in the event."@en ;
+    rdfs:isDefinedBy bio:principal .
 
 :freedomStatus a rdf:Property ;
     rdfs:label "Freedom Status"@en ;
-    rdfs:comment "An indication of the freedom status of the primary participant in the event."@en .
+    rdfs:comment "An indication of the freedom status of the primary participant in the event."@en ;
+    rdfs:range :FreedomStatus .
 
 :enslaver a rdf:Property ;
     rdfs:label "Enslaver"@en ;
     rdfs:comment "The person or institution responsible for holding in slavery the primary particpant in the event."@en .
 
-bio:age a rdf:Property ;
+:age a rdf:Property ;
     rdfs:label "Age"@en;
-    rdfs:comment "The age of the primary participant."@en .
+    rdfs:comment "The age of the primary participant."@en ;
+    rdfs:isDefinedBy bio:age .
 
 #
 # Properties Describing Other Participants
 #
-schema:author a rdf:Property ;
+:author a rdf:Property ;
     rdfs:label "Author"@en ;
-    rdfs:comment "The person who created the record of the event."@en .
+    rdfs:comment "The person who created the record of the event."@en ;
+    rdfs:isDefinedBy schema:author .
 
-bio:participant a rdf:Property ;
-    rdfs:lable "Additional Participant"@en ;
-    rdfs:comment "A participant in the event other than the principal participant."@en .
+:participant a rdf:Property ;
+    rdfs:label "Additional Participant"@en ;
+    rdfs:comment "A participant in the event other than the principal participant."@en ;
+    rdfs:isDefinedBy bio:participant .
 
-bio:witness a rdf:Property ;
+:witness a rdf:Property ;
     rdfs:label "Witness"@en ;
-    rdfs:comment "A person that witnesses and can bear testimony to the occurrence of an event."@en .
+    rdfs:comment "A person that witnesses and can bear testimony to the occurrence of an event."@en ;
+    rdfs:isDefinedBy bio:witness.
 
-bio:officiator a rdf:Property ;
+:officiator a rdf:Property ;
     rdfs:label "Officiator"@en ;
-    rdfs:comment "A person that officiates at an event."@en .
+    rdfs:comment "A person that officiates at an event."@en ;
+    rdfs:isDefinedBy bio:officiator .
 
-schema:buyer a rdf:Property ;
+:buyer a rdf:Property ;
     rdfs:label "Buyer"@en ;
-    rdfs:comment "The purchaser in a transaction."@en .
+    rdfs:comment "The purchaser in a transaction."@en ;
+    rdfs:isDefinedBy schema:buyer .
 
-schema:seller a rdf:Property ;
+:seller a rdf:Property ;
     rdfs:label "Seller"@en ;
-    rdfs:comment "The seller in a transaction."@en .
+    rdfs:comment "The seller in a transaction."@en ;
+    rdfs:isDefinedBy schema:seller .
 
 :leaser a rdf:Property ;
     rdfs:label "Leaser"@en ;
@@ -119,36 +141,43 @@ schema:seller a rdf:Property ;
     rdfs:label "Permission From"@en ;
     rdfs:comment "The person granting permission for the subject to act."@en .
 
-bio:organization a rdf:Property ;
+:organization a rdf:Property ;
     rdfs:label "Organization"@en ;
-    rdfs:comment "An organization that plays a role in an event."@en .
+    rdfs:comment "An organization that plays a role in an event."@en ;
+    rdfs:isDefinedBy bio:organization .
 
 #
 # Properties Describing Transactions
 #
-schema:duration a rdf:Property ;
+:duration a rdf:Property ;
     rdfs:label "Duration"@en ;
-    rdfs:comment "The length of the lease, rental, or term of enslavement before manumission in sales contract."@en .
+    rdfs:comment "The length of the lease, rental, or term of enslavement before manumission in sales contract."@en ;
+    rdfs:isDefinedBy schema:duration .
 
-schema:currency a rdf:Property ;
+:currency a rdf:Property ;
     rdfs:label "Currency"@en ;
-    rdfs:comment "The currency in which the monetary amount is expressed."@en .
+    rdfs:comment "The currency in which the monetary amount is expressed."@en ;
+    rdfs:isDefinedBy schema:currency .
 
-schema:price a rdf:Property ;
+:price a rdf:Property ;
     rdfs:label "Price"@en ;
-    rdfs:comment "The numeric representation of the price or evaluation for a transaction."@en .
+    rdfs:comment "The numeric representation of the price or evaluation for a transaction."@en ;
+    rdfs:isDefinedBy schema:price .
 
-schema:priceComponent a rdf:Property ;
+:priceComponent a rdf:Property ;
     rdfs:label "Price Component"@en ;
-    rdfs:comment "Indication of combined elements in a commercial transaction."@en .
+    rdfs:comment "Indication of combined elements in a commercial transaction."@en ;
+    rdfs:isDefinedBy schema:priceComponent .
 
-schema:priceSpecification a rdf:Property ;
+:priceSpecification a rdf:Property ;
     rdfs:label "Price Specification"@en ;
-    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en .
+    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en ;
+    rdfs:isDefinedBy schema:priceSpecification .
 
-schema:typeOfGood a rdf:Property ;
+:typeOfGood a rdf:Property ;
     rdfs:label "Good or Service"@en ;
-    rdfs:comment "Materials involved in a commercial transaction."@en .
+    rdfs:comment "Materials involved in a commercial transaction."@en ;
+    rdfs:isDefinedBy schema:typeOfGood .
 
 :taskPerformed a rdf:Property ;
     rdfs:label "Task Performed"@en ;
@@ -165,24 +194,28 @@ schema:typeOfGood a rdf:Property ;
 #
 # Properties Describing Travel or Transfer
 #
-schema:toLocation a rdf:Property ;
+:toLocation a rdf:Property ;
     rdfs:label "Destination"@en ;
-    rdfs:comment "The point of completion for a travel event."@en .
+    rdfs:comment "The point of completion for a travel event."@en ;
+    rdfs:isDefinedBy schema:toLocation .
 
-schema:fromLocation  a rdf:Property ;
+:fromLocation a rdf:Property ;
     rdfs:label "Origin"@en ;
-    rdfs:comment "The point of origin for a travel event."@en .
+    rdfs:comment "The point of origin for a travel event."@en ;
+    rdfs:isDefinedBy schema:fromLocation .
 
 #
 # Properties Describing Health-related Events
 #
-schema:signOrSymptom a rdf:Property ;
+:signOrSymptom a rdf:Property ;
     rdfs:label "Symptom"@en ;
-    rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition."@en .
+    rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition."@en ;
+    rdfs:isDefinedBy schema:signOrSymptom .
 
-schema:possibleTreatment a rdf:Property ;
+:possibleTreatment a rdf:Property ;
     rdfs:label "Treatment"@en ;
-    rdfs:comment "A possible treatment to address this condition, sign or symptom."@en .
+    rdfs:comment "A possible treatment to address this condition, sign or symptom."@en ;
+    rdfs:isDefinedBy schema:possibleTreatment .
 
 #
 # Properties Describing Legal Events
