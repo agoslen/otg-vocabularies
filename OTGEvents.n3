@@ -22,7 +22,7 @@
     rdfs:comment "Narrative description or transcription of event from document."@en ;
     rdfs:isDefinedBy dcterms:description .
 
-dcterms:type a rdf:Property ;
+:type a rdf:Property ;
     rdfs:label "Event Type"@en ;
     rdfs:comment "The kind of event being described."@en ;
     rdfs:isDefinedBy dcterms:type ;
