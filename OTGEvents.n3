@@ -33,11 +33,11 @@
     rdfs:comment "Keywords to further specify the type of event."@en ;
     rdfs:isDefinedBy schema:keywords .
 
-:actionStatus a rdf:Property ;
-    rdfs:label "Action Status"@en ;
+:freedomStatus a rdf:Property ;
+    rdfs:label "freedom Status"@en ;
     rdfs:comment "An indicator of the completion status of an event."@en ;
-    rdfs:isDefinedBy schema:actionStatus ;
-    rdfs:range :ActionStatus .
+    rdfs:isDefinedBy schema:freedomStatus ;
+    rdfs:range :freedomStatus .
 
 :date a rdf:Property ;
     rdfs:label "Date"@en ;
@@ -121,12 +121,12 @@
 
 :buyer a rdf:Property ;
     rdfs:label "Buyer"@en ;
-    rdfs:comment "The purchaser in a transaction."@en ;
+    rdfs:comment "The purchaser in a transfreedom."@en ;
     rdfs:isDefinedBy schema:buyer .
 
 :seller a rdf:Property ;
     rdfs:label "Seller"@en ;
-    rdfs:comment "The seller in a transaction."@en ;
+    rdfs:comment "The seller in a transfreedom."@en ;
     rdfs:isDefinedBy schema:seller .
 
 :leaser a rdf:Property ;
@@ -147,7 +147,7 @@
     rdfs:isDefinedBy bio:organization .
 
 #
-# Properties Describing Transactions
+# Properties Describing Transfreedoms
 #
 :duration a rdf:Property ;
     rdfs:label "Duration"@en ;
@@ -161,12 +161,12 @@
 
 :price a rdf:Property ;
     rdfs:label "Price"@en ;
-    rdfs:comment "The numeric representation of the price or evaluation for a transaction."@en ;
+    rdfs:comment "The numeric representation of the price or evaluation for a transfreedom."@en ;
     rdfs:isDefinedBy schema:price .
 
 :priceComponent a rdf:Property ;
     rdfs:label "Price Component"@en ;
-    rdfs:comment "Indication of combined elements in a commercial transaction."@en ;
+    rdfs:comment "Indication of combined elements in a commercial transfreedom."@en ;
     rdfs:isDefinedBy schema:priceComponent .
 
 :priceSpecification a rdf:Property ;
@@ -176,7 +176,7 @@
 
 :typeOfGood a rdf:Property ;
     rdfs:label "Good or Service"@en ;
-    rdfs:comment "Materials involved in a commercial transaction."@en ;
+    rdfs:comment "Materials involved in a commercial transfreedom."@en ;
     rdfs:isDefinedBy schema:typeOfGood .
 
 :taskPerformed a rdf:Property ;
@@ -189,7 +189,7 @@
 
 :exchangedFor a rdf:Property ;
     rdfs:label "Exchanged For"@en ;
-    rdfs:comment "The goods or services exchanged in transaction. Might be used in lieu of monetary payment."@en .
+    rdfs:comment "The goods or services exchanged in transfreedom. Might be used in lieu of monetary payment."@en .
     
 #
 # Properties Describing Travel or Transfer
@@ -244,8 +244,8 @@
 #
 # Classes 
 #
-:CommercialTransactionEvent a rdfs:Class ;
-    rdfs:label "Commercial Transaction Event"@en ;
+:CommercialTransfreedomEvent a rdfs:Class ;
+    rdfs:label "Commercial Transfreedom Event"@en ;
     rdfs:comment "An event in which an enslaved person is involved in the purchase, sale, or exchange of goods or services."@en ;
     rdfs:subClassOf dctype:Event .
     

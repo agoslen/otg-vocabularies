@@ -1,0 +1,41 @@
+@prefix otgfreedomstatus: <https://onthesegrounds.org/vocab/freedom-status#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<https://onthesegrounds.org/vocab/freedom-status#> rdf:type skos:ConceptScheme;
+    dcterms:title "Freedom Status Vocabulary"@en ;
+    dcterms:description "A controlled vocabulary to describe the status of events."@en ;
+    skos:hasTopConcept otgevents:freedomStatus.
+
+otgfreedomstatus:freedomStatus rdf:type skos:Collection ;
+    skos:prefLabel "Freedom Status"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#> ;
+    skos:topConceptOf <https://onthesegrounds.org/vocab/freedom-status#> ;
+    skos:member otgfreedomstatus:enslaved ;
+    skos:member otgfreedomstatus:free ;
+    skos:member otgfreedomstatus:transition ;
+    skos:member otgfreedomstatus:unknown .
+    
+
+otgfreedomstatus:enslaved rdf:type skos:Concept;
+    skos:prefLabel "Enslaved"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+
+otgfreedomstatus:free rdf:type skos:Concept;
+    skos:prefLabel "Free"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+
+otgfreedomstatus:transition rdf:type skos:Concept;
+    skos:prefLabel "Transition"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+
+otgfreedomstatus:unknown rdf:type skos:Concept;
+    skos:prefLabel "Unknown"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+
+

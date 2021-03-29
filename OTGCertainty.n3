@@ -1,0 +1,33 @@
+@prefix otgcertainty: <https://onthesegrounds.org/vocab/certainty#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<https://onthesegrounds.org/vocab/certainty#> rdf:type skos:ConceptScheme;
+    dcterms:title "Certainty Vocabulary"@en ;
+    dcterms:description "A controlled vocabulary to describe the certainty of the data."@en ;
+    skos:hasTopConcept otgevents:certainty.
+
+otgcertainty:certainty rdf:type skos:Collection ;
+    skos:prefLabel "Certainty"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/certainty#> ;
+    skos:topConceptOf <https://onthesegrounds.org/vocab/certainty#> ;
+    skos:member otgcertainty:approximate ;
+    skos:member otgcertainty:inferred ;
+    skos:member otgcertainty:questionable .
+
+otgcertainty:approximate rdf:type skos:Concept;
+    skos:prefLabel "Approximate"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/certainty#>.
+
+otgcertainty:inferred rdf:type skos:Concept;
+    skos:prefLabel "Inferred"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/certainty#>.
+
+otgcertainty:questionable rdf:type skos:Concept;
+    skos:prefLabel "Questionable"@en ;
+    skos:definition "....."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/certainty#>.
+
