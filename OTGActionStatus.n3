@@ -1,40 +1,40 @@
-@prefix otgfreedoms: <https://onthesegrounds.org/vocab/freedom-status#> .
+@prefix otgaction: <https://onthesegrounds.org/vocab/action-status#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-<https://onthesegrounds.org/vocab/freedom-status#> rdf:type skos:ConceptScheme;
-    dcterms:title "freedom Status Vocabulary"@en ;
-    dcterms:description "A controlled vocabulary to describe the status of events."@en ;
-    skos:hasTopConcept otgevents:freedomStatus.
+<https://onthesegrounds.org/vocab/freedom-sstatus#> rdf:type skos:ConceptScheme;
+    dcterms:title "Action Status Vocabulary"@en ;
+    dcterms:description "A controlled vocabulary to describe the sstatus of events."@en ;
+    skos:hasTopConcept otgevents:actionstatus.
 
-otgfreedoms:freedomStatus rdf:type skos:Collection ;
-    skos:prefLabel "freedom Status"@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#> ;
-    skos:topConceptOf <https://onthesegrounds.org/vocab/freedom-status#> ;
-    skos:member otgfreedoms:complete ;
-    skos:member otgfreedoms:failed ;
-    skos:member otgfreedoms:potential ;
-    skos:member otgfreedoms:unknown .
+otgactionstatus:actionstatus rdf:type skos:Collection ;
+    skos:prefLabel "Action Status"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/action-status#> ;
+    skos:topConceptOf <https://onthesegrounds.org/vocab/action-status#> ;
+    skos:member otgactionstatus:complete ;
+    skos:member otgactionstatus:failed ;
+    skos:member otgactionstatus:potential ;
+    skos:member otgactionstatus:unknown .
 
-otgfreedoms:complete rdf:type skos:Concept;
+otgactionstatus:complete rdf:type skos:Concept;
     skos:prefLabel "Complete"@en ;
     skos:definition "....."@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+    skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
-otgfreedoms:failed rdf:type skos:Concept;
+otgactionstatus:failed rdf:type skos:Concept;
     skos:prefLabel "Failed"@en ;
     skos:definition "....."@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+    skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
-otgfreedoms:potential rdf:type skos:Concept;
+otgactionstatus:potential rdf:type skos:Concept;
     skos:prefLabel "Potential"@en ;
     skos:definition "....."@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+    skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
-otgfreedoms:unknown rdf:type skos:Concept;
+otgactionstatus:unknown rdf:type skos:Concept;
     skos:prefLabel "Unknown"@en ;
     skos:definition "....."@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
+    skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
 
