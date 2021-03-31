@@ -5,6 +5,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix rel: <http://purl.org/vocab/relationship> .
 @prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>. 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -15,34 +16,34 @@
 :title a rdf:Property ;
     rdfs:label "Title"@en ;
     rdfs:comment "Descriptive title of the event that usually includes the date, the participant, and event type."@en ;
-    rdfs:isDefinedBy dcterms:title .
+    owl:equivalentProperty dcterms:title .
 
 :description a rdf:Property ;
     rdfs:label "Description"@en ;
     rdfs:comment "Narrative description or transcription of event from document."@en ;
-    rdfs:isDefinedBy dcterms:description .
+    owl:equivalentProperty dcterms:description .
 
 :type a rdf:Property ;
     rdfs:label "Event Type"@en ;
     rdfs:comment "The kind of event being described."@en ;
-    rdfs:isDefinedBy dcterms:type ;
+    owl:equivalentProperty dcterms:type ;
     rdfs:range :EventType .
     
 :keywords a rdf:Property ;
     rdfs:label "Keywords"@en ;
     rdfs:comment "Keywords to further specify the type of event."@en ;
-    rdfs:isDefinedBy schema:keywords .
+    owl:equivalentProperty schema:keywords .
 
 :freedomStatus a rdf:Property ;
     rdfs:label "freedom Status"@en ;
     rdfs:comment "An indicator of the completion status of an event."@en ;
-    rdfs:isDefinedBy schema:freedomStatus ;
+    owl:equivalentProperty schema:freedomStatus ;
     rdfs:range :freedomStatus .
 
 :date a rdf:Property ;
     rdfs:label "Date"@en ;
     rdfs:comment "Date of event being described."@en ;
-    rdfs:isDefinedBy dcterms:date .
+    owl:equivalentProperty dcterms:date .
 
 :dateCertainty a rdf:Property ;
     rdfs:label "Date Certainty"@en ;
@@ -52,22 +53,22 @@
 :location a rdf:Property ;
     rdfs:label "Location"@en ;
     rdfs:comment "The location of the event being described. Can be general."@en ;
-    rdfs:isDefinedBy schema:location .
+    owl:equivalentProperty schema:location .
 
 :cause a rdf:Property ;
     rdfs:label "Cause"@en ;
     rdfs:comment "The reason precipitating the event."@en ;
-    rdfs:isDefinedBy bio:InitiatingEvent .
+    owl:equivalentProperty bio:InitiatingEvent .
 
 :result a rdf:Property ;
     rdfs:label "Outcome"@en ;
     rdfs:comment "The result produced by an event."@en ;
-    rdfs:isDefinedBy schema:result .
+    owl:equivalentProperty schema:result .
 
 :source a rdf:Property ;
     rdfs:label "Source"@en ;
     rdfs:comment "The archival document from which the record information is drawn."@en ;
-    rdfs:isDefinedBy dcterms:source .
+    owl:equivalentProperty dcterms:source .
 
 :relatedEvent a rdf:Property ;
     rdfs:label "Related Event"@en ;
@@ -80,7 +81,7 @@
 :principal a rdf:Property ;
     rdfs:label "Primary Participant"@en ;
     rdfs:comment "The primary person who is involved in the event."@en ;
-    rdfs:isDefinedBy bio:principal .
+    owl:equivalentProperty bio:principal .
 
 :freedomStatus a rdf:Property ;
     rdfs:label "Freedom Status"@en ;
@@ -94,7 +95,7 @@
 :age a rdf:Property ;
     rdfs:label "Age"@en;
     rdfs:comment "The age of the primary participant."@en ;
-    rdfs:isDefinedBy bio:age .
+    owl:equivalentProperty bio:age .
 
 #
 # Properties Describing Other Participants
@@ -102,32 +103,32 @@
 :author a rdf:Property ;
     rdfs:label "Author"@en ;
     rdfs:comment "The person who created the record of the event."@en ;
-    rdfs:isDefinedBy schema:author .
+    owl:equivalentProperty schema:author .
 
 :participant a rdf:Property ;
     rdfs:label "Additional Participant"@en ;
     rdfs:comment "A participant in the event other than the principal participant."@en ;
-    rdfs:isDefinedBy bio:participant .
+    owl:equivalentProperty bio:participant .
 
 :witness a rdf:Property ;
     rdfs:label "Witness"@en ;
     rdfs:comment "A person that witnesses and can bear testimony to the occurrence of an event."@en ;
-    rdfs:isDefinedBy bio:witness.
+    owl:equivalentProperty bio:witness.
 
 :officiator a rdf:Property ;
     rdfs:label "Officiator"@en ;
     rdfs:comment "A person that officiates at an event."@en ;
-    rdfs:isDefinedBy bio:officiator .
+    owl:equivalentProperty bio:officiator .
 
 :buyer a rdf:Property ;
     rdfs:label "Buyer"@en ;
     rdfs:comment "The purchaser in a transfreedom."@en ;
-    rdfs:isDefinedBy schema:buyer .
+    owl:equivalentProperty schema:buyer .
 
 :seller a rdf:Property ;
     rdfs:label "Seller"@en ;
     rdfs:comment "The seller in a transfreedom."@en ;
-    rdfs:isDefinedBy schema:seller .
+    owl:equivalentProperty schema:seller .
 
 :leaser a rdf:Property ;
     rdfs:label "Leaser"@en ;
@@ -144,7 +145,7 @@
 :organization a rdf:Property ;
     rdfs:label "Organization"@en ;
     rdfs:comment "An organization that plays a role in an event."@en ;
-    rdfs:isDefinedBy bio:organization .
+    owl:equivalentProperty bio:organization .
 
 #
 # Properties Describing Transfreedoms
@@ -152,32 +153,32 @@
 :duration a rdf:Property ;
     rdfs:label "Duration"@en ;
     rdfs:comment "The length of the lease, rental, or term of enslavement before manumission in sales contract."@en ;
-    rdfs:isDefinedBy schema:duration .
+    owl:equivalentProperty schema:duration .
 
 :currency a rdf:Property ;
     rdfs:label "Currency"@en ;
     rdfs:comment "The currency in which the monetary amount is expressed."@en ;
-    rdfs:isDefinedBy schema:currency .
+    owl:equivalentProperty schema:currency .
 
 :price a rdf:Property ;
     rdfs:label "Price"@en ;
     rdfs:comment "The numeric representation of the price or evaluation for a transfreedom."@en ;
-    rdfs:isDefinedBy schema:price .
+    owl:equivalentProperty schema:price .
 
 :priceComponent a rdf:Property ;
     rdfs:label "Price Component"@en ;
     rdfs:comment "Indication of combined elements in a commercial transfreedom."@en ;
-    rdfs:isDefinedBy schema:priceComponent .
+    owl:equivalentProperty schema:priceComponent .
 
 :priceSpecification a rdf:Property ;
     rdfs:label "Price Specification"@en ;
     rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en ;
-    rdfs:isDefinedBy schema:priceSpecification .
+    owl:equivalentProperty schema:priceSpecification .
 
 :typeOfGood a rdf:Property ;
     rdfs:label "Good or Service"@en ;
     rdfs:comment "Materials involved in a commercial transfreedom."@en ;
-    rdfs:isDefinedBy schema:typeOfGood .
+    owl:equivalentProperty schema:typeOfGood .
 
 :taskPerformed a rdf:Property ;
     rdfs:label "Task Performed"@en ;
@@ -197,12 +198,12 @@
 :toLocation a rdf:Property ;
     rdfs:label "Destination"@en ;
     rdfs:comment "The point of completion for a travel event."@en ;
-    rdfs:isDefinedBy schema:toLocation .
+    owl:equivalentProperty schema:toLocation .
 
 :fromLocation a rdf:Property ;
     rdfs:label "Origin"@en ;
     rdfs:comment "The point of origin for a travel event."@en ;
-    rdfs:isDefinedBy schema:fromLocation .
+    owl:equivalentProperty schema:fromLocation .
 
 #
 # Properties Describing Health-related Events
@@ -210,12 +211,12 @@
 :signOrSymptom a rdf:Property ;
     rdfs:label "Symptom"@en ;
     rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition."@en ;
-    rdfs:isDefinedBy schema:signOrSymptom .
+    owl:equivalentProperty schema:signOrSymptom .
 
 :possibleTreatment a rdf:Property ;
     rdfs:label "Treatment"@en ;
     rdfs:comment "A possible treatment to address this condition, sign or symptom."@en ;
-    rdfs:isDefinedBy schema:possibleTreatment .
+    owl:equivalentProperty schema:possibleTreatment .
 
 #
 # Properties Describing Legal Events
