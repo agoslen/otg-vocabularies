@@ -10,17 +10,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Core Properties
+# Properties for Event Records
 #
 
 :title a rdf:Property ;
     rdfs:label "Title"@en ;
-    rdfs:comment "Descriptive title of the event that usually includes the date, the participant, and event type."@en ;
+    rdfs:comment "Descriptive title of the event."@en ;
     owl:equivalentProperty dcterms:title .
 
 :description a rdf:Property ;
     rdfs:label "Description"@en ;
-    rdfs:comment "Narrative description or transcription of event from document."@en ;
+    rdfs:comment "Narrative description and/or transcription of event from document."@en ;
     owl:equivalentProperty dcterms:description .
 
 :type a rdf:Property ;
@@ -34,11 +34,11 @@
     rdfs:comment "Keywords to further specify the type of event."@en ;
     owl:equivalentProperty schema:keywords .
 
-:freedomStatus a rdf:Property ;
-    rdfs:label "freedom Status"@en ;
+:actionStatus a rdf:Property ;
+    rdfs:label "Action Status"@en ;
     rdfs:comment "An indicator of the completion status of an event."@en ;
-    owl:equivalentProperty schema:freedomStatus ;
-    rdfs:range :freedomStatus .
+    owl:equivalentProperty schema:actionStatus ;
+    rdfs:range :actionStatus .
 
 :date a rdf:Property ;
     rdfs:label "Date"@en ;
@@ -148,7 +148,7 @@
     owl:equivalentProperty bio:organization .
 
 #
-# Properties Describing Transfreedoms
+# Properties Describing Transactions
 #
 :duration a rdf:Property ;
     rdfs:label "Duration"@en ;
@@ -170,10 +170,10 @@
     rdfs:comment "Indication of combined elements in a commercial transfreedom."@en ;
     owl:equivalentProperty schema:priceComponent .
 
-:priceSpecification a rdf:Property ;
-    rdfs:label "Price Specification"@en ;
-    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en ;
-    owl:equivalentProperty schema:priceSpecification .
+# :priceSpecification a rdf:Property ;
+#    rdfs:label "Price Specification"@en ;
+#    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en ;
+#    owl:equivalentProperty schema:priceSpecification .
 
 :typeOfGood a rdf:Property ;
     rdfs:label "Good or Service"@en ;
@@ -186,7 +186,7 @@
 
 :contractTerms a rdf:Property ;
     rdfs:label "Contract Terms"@en ;
-    rdfs:comment "The terms of a legal or employment contract."@en .
+    rdfs:comment "The terms of a sale, legal, or employment contract."@en .
 
 :exchangedFor a rdf:Property ;
     rdfs:label "Exchanged For"@en ;
@@ -241,7 +241,120 @@
     rdfs:label "Judge"@en ;
     rdfs:comment "The judge in a legal case."@en .
     
+
+#
+# Properties for Person Records
+#
+
+:givenName a rdf:Property ;
+    rdfs:label "Given Name"@en ;
+    rdfs:comment "Given name. In the U.S., the first name of a person."@en ;
+    owl:equivalentProperty schema:givenName .
+
+:familyName a rdf:Property ;
+    rdfs:label "Family Name"@en ;
+    rdfs:comment "Family name. In the U.S., the last name of a person."@en ;
+    owl:equivalentProperty schema:familyName .
+
+:alternateName a rdf:Property ;
+    rdfs:label "Alternate Name"@en ;
+    rdfs:comment "An alias for the person."@en ;
+    owl:equivalentProperty schema:alternateName .
+
+:birthDate a rdf:Property ;
+    rdfs:label "Birth Date"@en ;
+    rdfs:comment "Date of birth."@en ;
+    owl:equivalentProperty schema:birthDate .
+
+:deathDate a rdf:Property ;
+    rdfs:label "Death Date"@en ;
+    rdfs:comment "Date of death."@en ;
+    owl:equivalentProperty schema:deathDate .
+
+:sex a rdf:Property ;
+    rdfs:label "Sex"@en ;
+    rdfs:comment "Biological sex of the named individual as designated in or derived from source document(s), often based on observations by a third party of the individual's physical characteristics."@en ;
+    rdfs:range :sex .
+
+:race a rdf:Property ;
+    rdfs:label "Race or Color"@en ;
+    rdfs:comment "Color or racial designation of the named individual."@en .
+
+:occupation a rdf:Property ;
+    rdfs:label "Occupation"@en ;
+    rdfs:comment "Skills of trade of the person being described."@en ;
+    rdfs:range :Occupation ;
+    owl:equivalentProperty schema:hasOccupation .
     
+:parentOf a rdf:Property ;
+    rdfs:label "Parent of"@en ;
+    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
+    owl:equivalentProperty rel:parentOf .
+
+:grandparentOf a rdf:Property ;
+    rdfs:label "Grandparent of"@en ;
+    rdfs:comment "A person who is the child of the person being described’s child."@en ;
+    owl:equivalentProperty rel:grandparentOf .
+
+:siblingOf a rdf:Property ;
+    rdfs:label "Sibling of"@en ;
+    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
+    owl:equivalentProperty rel:siblingOf .
+
+:spouseOf a rdf:Property ;
+    rdfs:label "Spouse of"@en ;
+    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
+    owl:equivalentProperty rel:spouseOf .
+
+:foundingLocation a rdf:Property ;
+    rdfs:label "Place of Origin"@en ;
+    rdfs:comment "The general homeland for the person being described."@en ;
+    owl:equivalentProperty schema:foundingLocation .
+
+:ethnolinguisticDescriptor a rdf:Property ;
+    rdfs:label "Ethnolinguistic Descriptor"@en ;
+    rdfs:comment "The commonly used language of the person being described."@en ;
+    rdfs:range :ethnolinguisticDescriptor
+    owl:equivalentProperty schema:knowsLanguage .
+
+#
+# Properties for Place Records
+#
+:latitude a rdf:Property ;
+    rdfs:lable "Latitude"@en ;
+    rdfs:comment "The latitude given to a location."@en ;
+    owl:equivalentProperty schema:latitude .
+
+:longitude a rdf:Property ;
+    rdfs:lable "Longitude"@en ;
+    rdfs:comment "The longitude given to a location."@en ;
+    owl:equivalentProperty schema:longitude .
+
+:city a rdf:Property ;
+    rdfs:lable "City"@en ;
+    rdfs:comment "The name of the city, town, or village where the place being described is located."@en ;
+    owl:equivalentProperty schema:addressLocality .
+
+:state a rdf:Property ;
+    rdfs:lable "State or Province"@en ;
+    rdfs:comment "The name of the state of province where the place being described is located."@en ;
+    owl:equivalentProperty schema:addressLocality .
+
+:country a rdf:Property ;
+    rdfs:lable "Country"@en ;
+    rdfs:comment "The verbatim name of the nation where the place being described is located."@en ;
+    owl:equivalentProperty schema:addressCountry .
+
+:placeType a rdf:Property ;
+    rdfs:lable "Place Type"@en ;
+    rdfs:comment "A generic category or class of location."@en ;
+    rdfs:range :placeType .
+
+:region a rdf:Property ;
+    rdfs:lable "Region"@en ;
+    rdfs:comment "Identifies a geographic area that encompasses the place."@en ;
+    owl:equivalentProperty schema:addressRegion .
+
 #
 # Classes 
 #
