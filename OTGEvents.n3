@@ -78,6 +78,7 @@
 #
 # Properties Describing the Principal Participant
 #
+
 :principal a rdf:Property ;
     rdfs:label "Primary Participant"@en ;
     rdfs:comment "The primary person who is involved in the event."@en ;
@@ -100,6 +101,7 @@
 #
 # Properties Describing Other Participants
 #
+
 :author a rdf:Property ;
     rdfs:label "Author"@en ;
     rdfs:comment "The person who created the record of the event."@en ;
@@ -127,7 +129,7 @@
 
 :seller a rdf:Property ;
     rdfs:label "Seller"@en ;
-    rdfs:comment "The seller in a transfreedom."@en ;
+    rdfs:comment "The seller in a transaction."@en ;
     owl:equivalentProperty schema:seller .
 
 :leaser a rdf:Property ;
@@ -150,6 +152,7 @@
 #
 # Properties Describing Transactions
 #
+
 :duration a rdf:Property ;
     rdfs:label "Duration"@en ;
     rdfs:comment "The length of the lease, rental, or term of enslavement before manumission in sales contract."@en ;
@@ -190,6 +193,7 @@
 #
 # Properties Describing Movement Events
 #
+
 :toLocation a rdf:Property ;
     rdfs:label "Destination"@en ;
     rdfs:comment "The point of completion for a travel event."@en ;
@@ -216,6 +220,7 @@
 #
 # Properties Describing Legal Events
 #
+
 :petitionerAgainst a rdf:Property ; 
     rdfs:label "Petitioner"@en ;
     rdfs:comment "The petitioner against in a legal case."@en .
@@ -240,6 +245,7 @@
 #
 # Properties for Person Records
 #
+
 :givenName a rdf:Property ;
     rdfs:label "Given Name"@en ;
     rdfs:comment "Given name. In the U.S., the first name of a person."@en ;
@@ -277,8 +283,8 @@
 :occupation a rdf:Property ;
     rdfs:label "Occupation"@en ;
     rdfs:comment "Skills of trade of the person being described."@en ;
-    rdfs:range :Occupation ;
-    owl:equivalentProperty schema:hasOccupation .
+    owl:equivalentProperty schema:hasOccupation ;
+    rdfs:range :Occupation .
     
 :parentOf a rdf:Property ;
     rdfs:label "Parent of"@en ;
@@ -308,8 +314,8 @@
 :ethnolinguisticDescriptor a rdf:Property ;
     rdfs:label "Ethnolinguistic Descriptor"@en ;
     rdfs:comment "The commonly used language of the person being described."@en ;
-    rdfs:range :EthnolinguisticDescriptor
-    owl:equivalentProperty schema:knowsLanguage .
+    owl:equivalentProperty schema:knowsLanguage ;
+    rdfs:range :EthnolinguisticDescriptor .
 
 #
 # Properties for Place Records
@@ -352,8 +358,8 @@
 #
 # Classes 
 #
-:CommercialTransfreedomEvent a rdfs:Class ;
-    rdfs:label "Commercial Transfreedom Event"@en ;
+:CommercialTransactionEvent a rdfs:Class ;
+    rdfs:label "Commercial Transaction Event"@en ;
     rdfs:comment "An event in which an enslaved person is involved in the purchase, sale, or exchange of goods or services."@en ;
     rdfs:subClassOf dctype:Event .
     
