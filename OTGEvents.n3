@@ -15,12 +15,12 @@
 
 :title a rdf:Property ;
     rdfs:label "Title"@en ;
-    rdfs:comment "Descriptive title of the event."@en ;
+    rdfs:comment "A name given to the record."@en ;
     owl:equivalentProperty dcterms:title .
 
 :description a rdf:Property ;
     rdfs:label "Description"@en ;
-    rdfs:comment "Narrative description and/or transcription of event from document."@en ;
+    rdfs:comment "Narrative description and/or transcription of the entity."@en ;
     owl:equivalentProperty dcterms:description .
 
 :type a rdf:Property ;
@@ -72,7 +72,7 @@
 
 :relatedEvent a rdf:Property ;
     rdfs:label "Related Event"@en ;
-    rdfs:comment "An event that is related to the one being described."@en .
+    rdfs:comment "An event that is related to the one being described."@en ;
     rdfs:subPropertyOf dcterms:relation.
 
 #
@@ -170,11 +170,6 @@
     rdfs:comment "Indication of combined elements in a commercial transfreedom."@en ;
     owl:equivalentProperty schema:priceComponent .
 
-# :priceSpecification a rdf:Property ;
-#    rdfs:label "Price Specification"@en ;
-#    rdfs:comment "One or more detailed price specifications, indicating the unit price and delivery or payment charges."@en ;
-#    owl:equivalentProperty schema:priceSpecification .
-
 :typeOfGood a rdf:Property ;
     rdfs:label "Good or Service"@en ;
     rdfs:comment "Materials involved in a commercial transfreedom."@en ;
@@ -193,7 +188,7 @@
     rdfs:comment "The goods or services exchanged in transfreedom. Might be used in lieu of monetary payment."@en .
     
 #
-# Properties Describing Travel or Transfer
+# Properties Describing Movement Events
 #
 :toLocation a rdf:Property ;
     rdfs:label "Destination"@en ;
@@ -245,7 +240,6 @@
 #
 # Properties for Person Records
 #
-
 :givenName a rdf:Property ;
     rdfs:label "Given Name"@en ;
     rdfs:comment "Given name. In the U.S., the first name of a person."@en ;
@@ -258,7 +252,7 @@
 
 :alternateName a rdf:Property ;
     rdfs:label "Alternate Name"@en ;
-    rdfs:comment "An alias for the person."@en ;
+    rdfs:comment "An alias for the record."@en ;
     owl:equivalentProperty schema:alternateName .
 
 :birthDate a rdf:Property ;
@@ -273,8 +267,8 @@
 
 :sex a rdf:Property ;
     rdfs:label "Sex"@en ;
-    rdfs:comment "Biological sex of the named individual as designated in or derived from source document(s), often based on observations by a third party of the individual's physical characteristics."@en ;
-    rdfs:range :sex .
+    rdfs:comment "Biological sex of the person as designated in or derived from source document(s), often based on observations by a third party of the individual's physical characteristics."@en ;
+    rdfs:range :Sex .
 
 :race a rdf:Property ;
     rdfs:label "Race or Color"@en ;
@@ -314,44 +308,44 @@
 :ethnolinguisticDescriptor a rdf:Property ;
     rdfs:label "Ethnolinguistic Descriptor"@en ;
     rdfs:comment "The commonly used language of the person being described."@en ;
-    rdfs:range :ethnolinguisticDescriptor
+    rdfs:range :EthnolinguisticDescriptor
     owl:equivalentProperty schema:knowsLanguage .
 
 #
 # Properties for Place Records
 #
 :latitude a rdf:Property ;
-    rdfs:lable "Latitude"@en ;
+    rdfs:label "Latitude"@en ;
     rdfs:comment "The latitude given to a location."@en ;
     owl:equivalentProperty schema:latitude .
 
 :longitude a rdf:Property ;
-    rdfs:lable "Longitude"@en ;
+    rdfs:label "Longitude"@en ;
     rdfs:comment "The longitude given to a location."@en ;
     owl:equivalentProperty schema:longitude .
 
 :city a rdf:Property ;
-    rdfs:lable "City"@en ;
+    rdfs:label "City"@en ;
     rdfs:comment "The name of the city, town, or village where the place being described is located."@en ;
     owl:equivalentProperty schema:addressLocality .
 
 :state a rdf:Property ;
-    rdfs:lable "State or Province"@en ;
+    rdfs:label "State or Province"@en ;
     rdfs:comment "The name of the state of province where the place being described is located."@en ;
     owl:equivalentProperty schema:addressLocality .
 
 :country a rdf:Property ;
-    rdfs:lable "Country"@en ;
+    rdfs:label "Country"@en ;
     rdfs:comment "The verbatim name of the nation where the place being described is located."@en ;
     owl:equivalentProperty schema:addressCountry .
 
 :placeType a rdf:Property ;
-    rdfs:lable "Place Type"@en ;
+    rdfs:label "Place Type"@en ;
     rdfs:comment "A generic category or class of location."@en ;
-    rdfs:range :placeType .
+    rdfs:range :PlaceType .
 
 :region a rdf:Property ;
-    rdfs:lable "Region"@en ;
+    rdfs:label "Region"@en ;
     rdfs:comment "Identifies a geographic area that encompasses the place."@en ;
     owl:equivalentProperty schema:addressRegion .
 
