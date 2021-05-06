@@ -1,0 +1,89 @@
+@prefix : <https://onthesegrounds.org/vocab#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix rel: <http://purl.org/vocab/relationship> .
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>. 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#
+# Classes 
+#
+:CommercialTransactionEvent a rdfs:Class ;
+    rdfs:label "Commercial Transaction Event"@en ;
+    rdfs:comment "An event in which an enslaved person is involved in the purchase, sale, or exchange of goods or services."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:EducationEvent a rdfs:Class ;
+    rdfs:label "Education Event"@en ;
+    rdfs:comment "An event in which an enslaved person is learning in some way, formal or informal."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:EnslavedStatusEvent a rdfs:Class ;
+    rdfs:label "Ensalved Status Event"@en ;
+    rdfs:comment "An event related to a person's status of enslavement or freedom, including change of ownership or manumission."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:HealthEvent a rdfs:Class ;
+    rdfs:label "Health Event"@en ;
+    rdfs:comment "An event related to the illness, injury, or bodily condition of an enslaved person."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:InventoryEvent a rdfs:Class ;
+    rdfs:label "Inventory Event"@en ;
+    rdfs:comment "An event in which an enslaved person is included in a list by their enslaver, or other representative authority."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:LaborEvent a rdfs:Class ;
+    rdfs:label "Labor Event"@en ;
+    rdfs:comment "An event in which an enslaved person works at the behest of their enslaver or as a person hired out to another person or entity."@en ;
+    rdfs:subClassOf dctype:Event .
+
+:LegalEvent a rdfs:Class ;
+    rdfs:label "Legal Event"@en ;
+    rdfs:comment "An event in which an enslaved person is involved in a legal proceeding."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:LifeCourseEvent a rdfs:Class ;
+    rdfs:label "Life Course Event"@en ;
+    rdfs:comment "An event related to a major social or cultural milestone in a person's life."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:MembershipOrParticipationEvent a rdfs:Class ;
+    rdfs:label "Membership of Participation Event"@en ;
+    rdfs:comment "An event in which an enslaved person joins a group."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:NarrativeEvent a rdfs:Class ;
+    rdfs:label "Narrative Event"@en ;
+    rdfs:comment "An event in which an enslaved person relays or records the story of their life."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ProvisionEvent a rdfs:Class ;
+    rdfs:label "Provision Event"@en ;
+    rdfs:comment "An event related to securing or providing food, clothing, housing, or other necessities for an enslaved person."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ReligiousEvent a rdfs:Class ;
+    rdfs:label "Religious or Sacramental Event"@en ;
+    rdfs:comment "An event that is relgious in nature, including sacraments, rituals, and occasions of worship."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ResistanceEvent a rdfs:Class ;
+    rdfs:label "Resistance Event"@en ;
+    rdfs:comment "An event in which an enslaved person resists the status and/or conditions of enslavement."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:TravelEvent a rdfs:Class ;
+    rdfs:label "Travel Event"@en ;
+    rdfs:comment "An event in which an enslaved person moves from one geographical location to another."@en ;
+    rdfs:subClassOf dctype:Event .
+    
+:ViolenceEvent a rdfs:Class ;
+    rdfs:label "Violence Event"@en ;
+    rdfs:comment "An event that involves a physical altercation."@en ;
+    rdfs:subClassOf dctype:Event .
+
