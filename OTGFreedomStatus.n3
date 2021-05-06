@@ -5,7 +5,7 @@
 
 <https://onthesegrounds.org/vocab/freedom-status#> rdf:type skos:ConceptScheme;
     dcterms:title "Freedom Status Vocabulary"@en ;
-    dcterms:description "A controlled vocabulary to describe the status of events."@en ;
+    dcterms:description "A controlled vocabulary to indicate the state of freedom or enslavement of the primary participant that the time of the event."@en ;
     skos:hasTopConcept otgevents:freedomStatus.
 
 otgfreedomstatus:freedomStatus rdf:type skos:Collection ;
@@ -20,22 +20,22 @@ otgfreedomstatus:freedomStatus rdf:type skos:Collection ;
 
 otgfreedomstatus:enslaved rdf:type skos:Concept;
     skos:prefLabel "Enslaved"@en ;
-    skos:definition "....."@en ;
+    skos:definition "A condition of perpetual hereditary unfreedom that is central to the system of forced labor"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
 
 otgfreedomstatus:free rdf:type skos:Concept;
     skos:prefLabel "Free"@en ;
-    skos:definition "....."@en ;
+    skos:definition "A condition of autonomy and self possession that allows a person to control their own labor, movement, and social engagement"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
 
 otgfreedomstatus:transition rdf:type skos:Concept;
     skos:prefLabel "Transition"@en ;
-    skos:definition "....."@en ;
+    skos:definition "A condition of freedom that is in transition from enslaved to free or free to enslaved"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
 
 otgfreedomstatus:unknown rdf:type skos:Concept;
     skos:prefLabel "Unknown"@en ;
-    skos:definition "....."@en ;
+    skos:definition "A condition in which a person’s status as enslaved or free cannot be inferred from the available information"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/freedom-status#>.
 
 

@@ -3,10 +3,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-<https://onthesegrounds.org/vocab/freedom-sstatus#> rdf:type skos:ConceptScheme;
+<https://onthesegrounds.org/vocab/action-status#> rdf:type skos:ConceptScheme;
     dcterms:title "Action Status Vocabulary"@en ;
-    dcterms:description "A controlled vocabulary to describe the sstatus of events."@en ;
-    skos:hasTopConcept otgevents:actionstatus.
+    dcterms:description "A controlled vocabulary to describe the status of events."@en ;
+    skos:hasTopConcept otgevents:actionStatus.
 
 otgactionstatus:actionstatus rdf:type skos:Collection ;
     skos:prefLabel "Action Status"@en ;
@@ -19,22 +19,22 @@ otgactionstatus:actionstatus rdf:type skos:Collection ;
 
 otgactionstatus:complete rdf:type skos:Concept;
     skos:prefLabel "Complete"@en ;
-    skos:definition "....."@en ;
+    skos:definition "The action has been completed."@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
 otgactionstatus:failed rdf:type skos:Concept;
     skos:prefLabel "Failed"@en ;
-    skos:definition "....."@en ;
+    skos:definition "The action was proposed or attempted, but was not successfully completed."@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
 otgactionstatus:potential rdf:type skos:Concept;
     skos:prefLabel "Potential"@en ;
-    skos:definition "....."@en ;
+    skos:definition "The action has been proposed or mentioned, but has not yet taken place or been attempted."@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
 otgactionstatus:unknown rdf:type skos:Concept;
     skos:prefLabel "Unknown"@en ;
-    skos:definition "....."@en ;
+    skos:definition "The action’s status cannot be inferred from available information."@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/action-status#>.
 
 
