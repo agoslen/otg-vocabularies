@@ -26,8 +26,7 @@
 :type a rdf:Property ;
     rdfs:label "Event Type"@en ;
     rdfs:comment "The kind of event being described."@en ;
-    owl:equivalentProperty dcterms:type ;
-    rdfs:range :EventType .
+    owl:equivalentProperty dcterms:type .
     
 :keywords a rdf:Property ;
     rdfs:label "Keywords"@en ;
@@ -37,8 +36,7 @@
 :actionStatus a rdf:Property ;
     rdfs:label "Action Status"@en ;
     rdfs:comment "An indicator of the completion status of an event."@en ;
-    owl:equivalentProperty schema:actionStatus ;
-    rdfs:range :actionStatus .
+    owl:equivalentProperty schema:actionStatus .
 
 :date a rdf:Property ;
     rdfs:label "Date"@en ;
@@ -47,8 +45,7 @@
 
 :dateCertainty a rdf:Property ;
     rdfs:label "Date Certainty"@en ;
-    rdfs:comment "An indicator of the confidence certainty of the date."@en ;
-    rdfs:range :Certainty .
+    rdfs:comment "An indicator of the confidence certainty of the date."@en .
 
 :location a rdf:Property ;
     rdfs:label "Location"@en ;
@@ -86,8 +83,7 @@
 
 :freedomStatus a rdf:Property ;
     rdfs:label "Freedom Status"@en ;
-    rdfs:comment "An indication of the freedom status of the primary participant in the event."@en ;
-    rdfs:range :FreedomStatus .
+    rdfs:comment "An indication of the freedom status of the primary participant in the event."@en .
 
 :enslaver a rdf:Property ;
     rdfs:label "Enslaver"@en ;
@@ -246,6 +242,11 @@
 # Properties for Person Records
 #
 
+:identifier a rdf:Property ;
+    rdfs:label "Identifier"@en ;
+    rdfs:comment "A unique identifier."@en ;
+    owl:equivalentProperty dcterms:identifier .
+
 :givenName a rdf:Property ;
     rdfs:label "Given Name"@en ;
     rdfs:comment "Given name. In the U.S., the first name of a person."@en ;
@@ -316,6 +317,11 @@
     rdfs:comment "The commonly used language of the person being described."@en ;
     owl:equivalentProperty schema:knowsLanguage ;
     rdfs:range :EthnolinguisticDescriptor .
+
+:sameAs a rdf:Property ;
+    rdfs:label "Same As"@en ;
+    rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en ;
+    owl:equivalentProperty schema:sameAs .
 
 #
 # Properties for Place Records
