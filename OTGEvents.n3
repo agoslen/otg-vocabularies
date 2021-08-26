@@ -281,7 +281,7 @@
     rdfs:label "Race or Color"@en ;
     rdfs:comment "Color or racial designation of the named individual."@en .
 
-:occupation a rdf:Property ;
+:hasOccupation a rdf:Property ;
     rdfs:label "Occupation"@en ;
     rdfs:comment "Skills of trade of the person being described."@en ;
     owl:equivalentProperty schema:hasOccupation ;
