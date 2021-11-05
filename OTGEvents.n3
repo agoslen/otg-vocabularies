@@ -10,7 +10,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Properties for Event Records
+# Classes 
+#
+
+:Event a rdfs:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "An occurence in which an enslaved person is involved."@en .
+
+:Agent a rdfs:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:comment "A resource that acts or has the power to act."@en .
+
+:AgentClass a rdfs:Class ;
+    rdfs:label "AgentClass"@en ;
+    rdfs:comment "A group of agents."@en .
+
+:Location a rdfs:Class ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "A spatial region or named place."@en .
+
+#
+# Properties Shared by Multiple Record Types
 #
 
 :title a rdf:Property ;
@@ -22,6 +42,51 @@
     rdfs:label "Description"@en ;
     rdfs:comment "Narrative description and/or transcription of the entity."@en ;
     owl:equivalentProperty dcterms:description .
+
+:bibliographicCitation a rdf:Property ;
+    rdfs:label "BibliographicCitation"@en ;
+    rdfs:comment "A bibliographic reference for the resource."@en ;
+    owl:equivalentProperty dcterms:bibliographicCitation .
+
+:hasPart a rdf:Property ;
+    rdfs:label "Has Part"@en ;
+    rdfs:comment "A related resources that is included either physically or logically in the described resource."@en ;
+    owl:equivalentProperty dcterms:hasPart .
+
+:identifier a rdf:Property ;
+    rdfs:label "Identifier"@en ;
+    rdfs:comment "A unique identifier."@en ;
+    owl:equivalentProperty dcterms:identifier .
+
+:isPartOf a rdf:Property ;
+    rdfs:label "Is Part of"@en ;
+    rdfs:comment "A related resource in which the described resources is physically or logically included."@en ;
+    owl:equivalentProperty dcterms:isPartOf .
+
+:location a rdf:Property ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "The location of the resource being described. Can be general."@en ;
+    owl:equivalentProperty schema:location .
+
+:organization a rdf:Property ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "An organization related to the resource."@en ;
+    owl:equivalentProperty bio:organization .
+
+:relation a rdf:Property ;
+    rdfs:label "Relation"@en ;
+    rdfs:comment "A related resource."@en ;
+    owl:equivalentProperty dcterms:relation .
+
+:sameAs a rdf:Property ;
+    rdfs:label "Same As"@en ;
+    rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en ;
+    owl:equivalentProperty schema:sameAs .
+
+
+#
+# Properties for Event Records
+#
 
 :type a rdf:Property ;
     rdfs:label "Event Type"@en ;
@@ -46,11 +111,6 @@
 :dateCertainty a rdf:Property ;
     rdfs:label "Date Certainty"@en ;
     rdfs:comment "An indicator of the confidence certainty of the date."@en .
-
-:location a rdf:Property ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "The location of the event being described. Can be general."@en ;
-    owl:equivalentProperty schema:location .
 
 :cause a rdf:Property ;
     rdfs:label "Cause"@en ;
@@ -140,11 +200,6 @@
     rdfs:label "Permission From"@en ;
     rdfs:comment "The person granting permission for the subject to act."@en .
 
-:organization a rdf:Property ;
-    rdfs:label "Organization"@en ;
-    rdfs:comment "An organization that plays a role in an event."@en ;
-    owl:equivalentProperty bio:organization .
-
 #
 # Properties Describing Transactions
 #
@@ -203,6 +258,7 @@
 #
 # Properties Describing Health-related Events
 #
+
 :signOrSymptom a rdf:Property ;
     rdfs:label "Symptom"@en ;
     rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition."@en ;
@@ -241,11 +297,6 @@
 #
 # Properties for Person Records
 #
-
-:identifier a rdf:Property ;
-    rdfs:label "Identifier"@en ;
-    rdfs:comment "A unique identifier."@en ;
-    owl:equivalentProperty dcterms:identifier .
 
 :givenName a rdf:Property ;
     rdfs:label "Given Name"@en ;
@@ -318,10 +369,7 @@
     owl:equivalentProperty schema:knowsLanguage ;
     rdfs:range :EthnolinguisticDescriptor .
 
-:sameAs a rdf:Property ;
-    rdfs:label "Same As"@en ;
-    rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en ;
-    owl:equivalentProperty schema:sameAs .
+
 
 #
 # Properties for Place Records
