@@ -10,6 +10,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
+# Version 0.9.1, updated November 5, 2021
+# 
+
+#
 # Classes 
 #
 
@@ -140,6 +144,10 @@
     rdfs:label "Primary Participant"@en ;
     rdfs:comment "The primary person who is involved in the event."@en ;
     owl:equivalentProperty bio:principal .
+
+:primaryParticipantDescription a rdf:Property ;
+    rdfs:label "Primary Participant Description"@an ;
+    rdfs:comment "A description of the primary participant in the event."@en .
 
 :freedomStatus a rdf:Property ;
     rdfs:label "Freedom Status"@en ;
@@ -327,10 +335,6 @@
     rdfs:label "Sex"@en ;
     rdfs:comment "Biological sex of the person as designated in or derived from source document(s), often based on observations by a third party of the individual's physical characteristics."@en ;
     rdfs:range :Sex .
-
-:race a rdf:Property ;
-    rdfs:label "Race or Color"@en ;
-    rdfs:comment "Color or racial designation of the named individual."@en .
 
 :hasOccupation a rdf:Property ;
     rdfs:label "Occupation"@en ;
