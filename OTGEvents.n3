@@ -64,7 +64,7 @@
 
 :isPartOf a rdf:Property ;
     rdfs:label "Is Part of"@en ;
-    rdfs:comment "A related resource in which the described resources is physically or logically included."@en ;
+    rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
     owl:equivalentProperty dcterms:isPartOf .
 
 :location a rdf:Property ;
