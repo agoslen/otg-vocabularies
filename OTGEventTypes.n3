@@ -3,6 +3,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
+#
+# Version 0.9.1, updated November 12, 2021
+# 
+
 <https://onthesegrounds.org/vocab/event-types#> rdf:type skos:ConceptScheme;
     dcterms:title "Event Type Vocabulary"@en ;
     dcterms:description "A controlled vocabulary to describe the lived experiences of enslaved people who labored for colleges or universities."@en ;
