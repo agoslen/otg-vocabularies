@@ -69,10 +69,16 @@ otgevents:educationEvents rdf:type skos:Collection;
     skos:prefLabel "Education Events"@en;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:education.
+    skos:member otgevents:teaching
 
 otgevents:education rdf:type skos:Concept;
     skos:prefLabel "Education"@en ;
     skos:definition "An event in which an enslaved person is being educated"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#> .
+
+otgevents:education rdf:type skos:Concept;
+    skos:prefLabel "Teaching"@en ;
+    skos:definition "An event in which an enslaved person is teaching someone else"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> .
 
 
@@ -555,7 +561,7 @@ otgevents:violenceEvents rdf:type skos:Collection;
 
 otgevents:violence rdf:type skos:Concept;
     skos:prefLabel "Violence"@en ;
-    skos:definition "An event in which an enslaved person suffers violence or oppression at the hands of another, often a non-enslaved person"@en ;
+    skos:definition "An event in which an enslaved person is involved in a violent altercation, often at the hands of another, frequently a non-enslaved person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:capture rdf:type skos:Concept;
@@ -571,6 +577,11 @@ otgevents:harassment rdf:type skos:Concept;
 otgevents:jailing rdf:type skos:Concept;
     skos:prefLabel "Jailing"@en ;
     skos:definition "An event in which an enslaved person is confined by the state or a municipal authority for some wrongdoing or transgression"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:jailing rdf:type skos:Concept;
+    skos:prefLabel "Perpetrating"@en ;
+    skos:definition "An event in which an enslaved person performs a violent act"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:physicalAssault rdf:type skos:Concept;

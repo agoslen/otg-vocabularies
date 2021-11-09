@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Version 0.9.1, updated November 5, 2021
+# Version 0.9.1, updated November 12, 2021
 # 
 
 #
@@ -24,10 +24,6 @@
 :Agent a rdfs:Class ;
     rdfs:label "Agent"@en ;
     rdfs:comment "A resource that acts or has the power to act."@en .
-
-:AgentClass a rdfs:Class ;
-    rdfs:label "AgentClass"@en ;
-    rdfs:comment "A group of agents."@en .
 
 :Location a rdfs:Class ;
     rdfs:label "Location"@en ;
