@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 #
-# Version 0.9.1, updated November 12, 2021
+# Version 0.9.2, updated March 16, 2022
 # 
 
 <https://onthesegrounds.org/vocab/event-types#> rdf:type skos:ConceptScheme;
@@ -95,7 +95,7 @@ otgevents:freedomStatusEvents rdf:type skos:Collection;
     skos:member otgevents:enslavement;
     skos:member otgevents:exchange;
     skos:member otgevents:manumission;
-    skos:member otgevents:purchase;
+ #   skos:member otgevents:purchase;
     skos:member otgevents:sale;
     skos:member otgevents:transfer.
 
@@ -129,10 +129,11 @@ otgevents:manumission rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person is freed by an owner(s)"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:purchase rdf:type skos:Concept;
-    skos:prefLabel "Purchase"@en ;
-    skos:definition "An event in which an enslaved person is purchased by a free person or an organization"@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+# Deprecated March 16, 2022 v.0.9.2
+# otgevents:purchase rdf:type skos:Concept;
+#   skos:prefLabel "Purchase"@en ;
+#    skos:definition "An event in which an enslaved person is purchased by a free person or an organization"@en ;
+#    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:sale rdf:type skos:Concept;
     skos:prefLabel "Sale"@en ;
@@ -314,6 +315,15 @@ otgevents:marriage rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person participates in a ritual to mark their commitment to a long term relationship with another person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
+otgevents:parenthood rdf:type skos:Concept;
+    skos:prefLabel "Parenthood"@en ;
+    skos:definition "An event in which an enslaved person becomes a parent"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:grandparenthood rdf:type skos:Concept;
+    skos:prefLabel "Grandparenthood"@en ;
+    skos:definition "An event in which an enslaved person becomes a grandparent."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:membershipEvents rdf:type skos:Collection;
     skos:prefLabel "Membership or Participation Events"@en;
