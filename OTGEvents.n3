@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Version 0.9.1, updated November 12, 2021
+# Version 0.9.3, updated August 29, 2022
 # 
 
 #
@@ -192,9 +192,16 @@
     rdfs:comment "The seller in a transaction."@en ;
     owl:equivalentProperty schema:seller .
 
-:leaser a rdf:Property ;
-    rdfs:label "Leaser"@en ;
-    rdfs:comment "The person or organization leasing enslaved labor."@en .
+
+# Depricated in favor of Hirer
+# :leaser a rdf:Property ;
+#    rdfs:label "Leaser"@en ;
+#    rdfs:comment "The person or organization leasing enslaved labor."@en .
+
+:hirer a rdf:Property ;
+    rdfs:label "Hirer"@en ;
+    rdfs:comment "The person or organization hiring enslaved labor."@en .
+
 
 :perpetrator a rdf:Property ;
     rdfs:label "Perpetrator"@en ;

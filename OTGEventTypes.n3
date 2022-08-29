@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 #
-# Version 0.9.2, updated March 16, 2022
+# Version 0.9.3, updated August 29, 2022
 # 
 
 <https://onthesegrounds.org/vocab/event-types#> rdf:type skos:ConceptScheme;
@@ -20,9 +20,10 @@ otgevents:eventType rdf:type skos:Collection ;
     skos:member otgevents:educationEvents ;
     skos:member otgevents:freedomStatusEvents ;
     skos:member otgevents:healthEvents ;
+    skos:member otgevents:intra-CommunityConflictEvents ;
     skos:member otgevents:laborEvents ;
     skos:member otgevents:legalEvents ;
-    skos:member otgevents:lifeCourseEvents ;
+    skos:member otgevents:lifeEventEvents ;
     skos:member otgevents:membershipEvents ;
     skos:member otgevents:mentionEvents ;
     skos:member otgevents:narrativeEvents ;
@@ -55,7 +56,7 @@ otgevents:enslavedHire rdf:type skos:Concept;
 
 otgevents:enslavedLoan rdf:type skos:Concept;
     skos:prefLabel "Enslaved Loan"@en ;
-    skos:definition "An event in which an enslaved person is loaned to an individual other than their primary enslaver for a period of time"@en ;
+    skos:definition "An event in which an enslaved person is loaned to an individual other than their primary enslaver for a period of time (without monetary compensation to the primary enslaver)"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> .
 
 otgevents:services rdf:type skos:Concept;
@@ -147,7 +148,7 @@ otgevents:transfer rdf:type skos:Concept;
 
 
 otgevents:healthEvents rdf:type skos:Collection;
-    skos:prefLabel "Health Events"@en;
+    skos:prefLabel "Health Events"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:health;
     skos:member otgevents:childbirth;
@@ -186,15 +187,46 @@ otgevents:pregnancy rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person is pregnant"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
+otgevents:intra-CommunityConflictEvents rdf:type skos:Collection;
+    skos:prefLabel "Intra-Community Conflict Events"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
+    skos:member otgevents:intra-CommunityConflict;
+    skos:member otgevents:physicalAltercation;
+    skos:member otgevents:theft;
+    skos:member otgevents:verbalAltercation.
+
+otgevents:intra-CommunityConflict rdf:type skos:Concept;
+    skos:prefLabel "Intra-Community Conflict"@en ;
+    skos:definition "An event in which enslaved people are in conflict with one another"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:physicalAltercation rdf:type skos:Concept;
+    skos:prefLabel "Physical Altercation"@en ;
+    skos:definition "An event in which enslaved people are involved in a physical altercation with one another"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:theft rdf:type skos:Concept;
+    skos:prefLabel "Theft"@en ;
+    skos:definition "An event in which an enslaved person steals something from another enslaved person"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:verbalAltercation rdf:type skos:Concept;
+    skos:prefLabel "Verbal Altercation"@en ;
+    skos:definition "An event in which enslaved people are involved in a verbal altercation with one another"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:laborEvents rdf:type skos:Collection;
-    skos:prefLabel "Labor Events"@en;
+    skos:prefLabel "Labor Events"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:labor;
     skos:member otgevents:agriculture;
+    skos:member otgevents:artisinal;
     skos:member otgevents:domestic;
     skos:member otgevents:midwifery;
-    skos:member otgevents:skilled.
+    skos:member otgevents:sexWork;
+    skos:member otgevents:teachingAssistant.
+#    skos:member otgevents:skilled.
+    
 
 otgevents:labor rdf:type skos:Concept;
     skos:prefLabel "Labor"@en ;
@@ -204,6 +236,11 @@ otgevents:labor rdf:type skos:Concept;
 otgevents:agriculture rdf:type skos:Concept;
     skos:prefLabel "Agriculture"@en ;
     skos:definition "An event in which a person works to raise a crop or livestock"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:artisinal rdf:type skos:Concept;
+    skos:prefLabel "Artisinal"@en ;
+    skos:definition "An event in which a person participates in labor that requires specialized knowledge and experience, e.g. carpentry, blacksmithing, tailoring, shoemaking"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:domestic rdf:type skos:Concept;
@@ -216,22 +253,34 @@ otgevents:midwifery rdf:type skos:Concept;
     skos:definition "An event in which a person assists with the birthing of a child"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:skilled rdf:type skos:Concept;
-    skos:prefLabel "Skilled"@en ;
-    skos:definition "An event in which a person participates in labor that requires specialized knowledge and experience, e.g. carpentry, blacksmithing, tailoring, shoemaking"@en ;
+otgevents:sexWork rdf:type skos:Concept;
+    skos:prefLabel "Sex work"@en ;
+    skos:definition "An event in which a person engages in sexual activity in exchange for money or goods. That compensation, like other hired-out labor, usually benefited the person’s owner."@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:teachingAssistant rdf:type skos:Concept;
+    skos:prefLabel "Teaching assistant"@en ;
+    skos:definition "An event in which a person serves as an assistant to an instructor"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+# Depricated in favor of Artisinal
+# otgevents:skilled rdf:type skos:Concept;
+#    skos:prefLabel "Skilled"@en ;
+#    skos:definition "An event in which a person participates in labor that requires specialized knowledge and experience, e.g. carpentry, blacksmithing, tailoring, shoemaking"@en ;
+#    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 
 otgevents:legalEvents rdf:type skos:Collection;
     skos:prefLabel "Legal Events"@en;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:legal;
-    skos:member otgevents:civilCase;
-    skos:member otgevents:criminalCase;
+    skos:member otgevents:civilAction;
+    skos:member otgevents:criminalAction;
     skos:member otgevents:dowry;
     skos:member otgevents:freedomPetition;
-    skos:member otgevents:manumissionFiling;
+    skos:member otgevents:manumissionRegister;
     skos:member otgevents:probate;
+    skos:member otgevents:removalHearing;
     skos:member otgevents:taxFiling;
     skos:member otgevents:will.
 
@@ -240,14 +289,14 @@ otgevents:legal rdf:type skos:Concept;
     skos:definition "An event that involves a legal filing or proceeding related to an enslaved person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:civilCase rdf:type skos:Concept;
-    skos:prefLabel "Civil case"@en ;
-    skos:definition "A court proceeding involving an enslaved person based on a non-criminal issue"@en ;
+otgevents:civilAction rdf:type skos:Concept;
+    skos:prefLabel "Civil action"@en ;
+    skos:definition "A legal dispute involving an enslaved person based on a non-criminal issue"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:criminalCase rdf:type skos:Concept;
-    skos:prefLabel "Criminal case"@en ;
-    skos:definition "A court proceeding involving an enslaved person that relates to a criminal statute"@en ;
+otgevents:criminalAction rdf:type skos:Concept;
+    skos:prefLabel "Criminal action"@en ;
+    skos:definition "A legal dispute involving an enslaved person that relates to a criminal statute"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:dowry rdf:type skos:Concept;
@@ -260,14 +309,19 @@ otgevents:freedomPetition rdf:type skos:Concept;
     skos:definition "A legal petition from an enslaved person claiming their freedom rights"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:manumissionFiling rdf:type skos:Concept;
-    skos:prefLabel "Manumission filing"@en ;
+otgevents:manumissionRegister rdf:type skos:Concept;
+    skos:prefLabel "Manumission register"@en ;
     skos:definition "A legal filing that registers the freeing of an enslaved person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:probate rdf:type skos:Concept;
     skos:prefLabel "Probate"@en ;
     skos:definition "A legal filing that provides an accounting of a person’s estate after their death"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:removalHearing rdf:type skos:Concept;
+    skos:prefLabel "Removal Hearing"@en ;
+    skos:definition "A legal hearing required for the removal of an enslaved person from their home state to another state"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:taxFiling rdf:type skos:Concept;
@@ -281,17 +335,19 @@ otgevents:will rdf:type skos:Concept;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 
-otgevents:lifeCourseEvents rdf:type skos:Collection;
-    skos:prefLabel "Life Course Events"@en;
+otgevents:lifeEventEvents rdf:type skos:Collection;
+    skos:prefLabel "Life Event Events"@en;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
-    skos:member otgevents:lifeCourse;
+    skos:member otgevents:lifeEvent;
     skos:member otgevents:birth;
     skos:member otgevents:burial;
     skos:member otgevents:death;
-    skos:member otgevents:marriage.
+    skos:member otgevents:grandparenthood;
+    skos:member otgevents:marriage;
+    skos:member otgevents:parenthood.
 
-otgevents:lifeCourse rdf:type skos:Concept;
-    skos:prefLabel "Life course"@en ;
+otgevents:lifeEvent rdf:type skos:Concept;
+    skos:prefLabel "Life Event"@en ;
     skos:definition "An event involving an enslaved person that is part of the normal course of a human lifetime"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
@@ -310,6 +366,11 @@ otgevents:death rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person dies"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
+otgevents:grandparenthood rdf:type skos:Concept;
+    skos:prefLabel "Grandparenthood"@en ;
+    skos:definition "An event in which an enslaved person becomes a grandparent."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
 otgevents:marriage rdf:type skos:Concept;
     skos:prefLabel "Marriage"@en ;
     skos:definition "An event in which an enslaved person participates in a ritual to mark their commitment to a long term relationship with another person"@en ;
@@ -320,10 +381,6 @@ otgevents:parenthood rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person becomes a parent"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:grandparenthood rdf:type skos:Concept;
-    skos:prefLabel "Grandparenthood"@en ;
-    skos:definition "An event in which an enslaved person becomes a grandparent."@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:membershipEvents rdf:type skos:Collection;
     skos:prefLabel "Membership or Participation Events"@en;
@@ -498,12 +555,13 @@ otgevents:resistanceEvents rdf:type skos:Collection;
     skos:member otgevents:appeal;
     skos:member otgevents:defense;
     skos:member otgevents:freedomSeeking;
+    skos:member otgevents:propertyAppropriation;
     skos:member otgevents:propertyDestruction;
     skos:member otgevents:workSlowdown.
 
 otgevents:resistance rdf:type skos:Concept;
     skos:prefLabel "Resistance"@en ;
-    skos:definition "An event in which an enslaved person takes action to resist their status or treatment, or that of a compatriot"@en ;
+    skos:definition "An event in which an enslaved person takes action to resist their status, treatment, or condition, or that of a compatriot"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:appeal rdf:type skos:Concept;
@@ -521,6 +579,11 @@ otgevents:freedomSeeking rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person leaves the controlling jurisdiction of their owner permanently or for a time"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
+otgevents:propertyAppropriation rdf:type skos:Concept;
+    skos:prefLabel "Property appropriation"@en ;
+    skos:definition "An event in which someone appropriates property or provisions that are not technically under their control"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
 otgevents:propertyDestruction rdf:type skos:Concept;
     skos:prefLabel "Property destruction"@en ;
     skos:definition "An event in which someone purposefully damages someone else’s property"@en ;
@@ -531,6 +594,69 @@ otgevents:workSlowdown rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person performs work slowly or not at all"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
+otgevents:socialInterationEvents rdf:type skos:Collection;
+    skos:prefLabel "Social interaction Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
+    skos:member otgevents:socialInteration;
+    skos:member otgevents:celebration;
+    skos:member otgevents:ceremony;
+    skos:member otgevents:dancing;
+    skos:member otgevents:drinkingAlcohol;
+    skos:member otgevents:gambling;
+    skos:member otgevents:gamesSports;
+    skos:member otgevents:gathering;
+    skos:member otgevents:music;
+    skos:member otgevents:visit.
+
+otgevents:socialInteraction rdf:type skos:Concept;
+    skos:prefLabel "Social interaction"@en ;
+    skos:definition "An event in which an enslaved person engages with another person outside of the context of a work-related interaction"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:celebration rdf:type skos:Concept;
+    skos:prefLabel "Celebration"@en ;
+    skos:definition "An event in which an enslaved person attends a celebratory gathering"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:ceremony rdf:type skos:Concept;
+    skos:prefLabel "Ceremony (attending)"@en ;
+    skos:definition "An event in which an enslaved person attends a communal rite or ritual such as a wedding or a funeral"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:dancing rdf:type skos:Concept;
+    skos:prefLabel "Dancing"@en ;
+    skos:definition "An event in which an enslaved person dances"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:drinkingAlcohol rdf:type skos:Concept;
+    skos:prefLabel "Drinking alcohol"@en ;
+    skos:definition "An event in which an enslaved person consumes alcohol "@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:gambling rdf:type skos:Concept;
+    skos:prefLabel "Gambling"@en ;
+    skos:definition "An event in which an enslaved person makes a wager of money or goods on the outcome of an event, game, or sport "@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:gamesSports rdf:type skos:Concept;
+    skos:prefLabel "Games and sports"@en ;
+    skos:definition "An event in which an enslaved person plays a game or engages in a sporting activity"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:gathering rdf:type skos:Concept;
+    skos:prefLabel "Social interaction"@en ;
+    skos:definition "An event in which an enslaved person congregates with others"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:music rdf:type skos:Concept;
+    skos:prefLabel "Music"@en ;
+    skos:definition "An event in which an enslaved person plays an instrument or sings"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+ otgevents:visit rdf:type skos:Concept;
+    skos:prefLabel "Visit"@en ;
+    skos:definition "An event in which an enslaved person travels to meet with another person for non-work-related reason"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.   
 
 otgevents:travelEvents rdf:type skos:Collection;
     skos:prefLabel "Travel Events"@en;
@@ -575,7 +701,7 @@ otgevents:violenceEvents rdf:type skos:Collection;
 
 otgevents:violence rdf:type skos:Concept;
     skos:prefLabel "Violence"@en ;
-    skos:definition "An event in which an enslaved person is involved in a violent altercation, often at the hands of another, frequently a non-enslaved person"@en ;
+    skos:definition "An event in which an enslaved person is involved in a violent altercation with a non-enslaved person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:capture rdf:type skos:Concept;
@@ -584,8 +710,8 @@ otgevents:capture rdf:type skos:Concept;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:harassment rdf:type skos:Concept;
-    skos:prefLabel "Harassment"@en ;
-    skos:definition "An event in which a an enslaved person is subjected to verbal taunting or abuse"@en ;
+    skos:prefLabel "Harassment (verbal)"@en ;
+    skos:definition "An event in which a an enslaved person is subjected to ongoing verbal taunting or abuse"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:jailing rdf:type skos:Concept;
