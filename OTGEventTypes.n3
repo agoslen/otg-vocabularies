@@ -278,7 +278,7 @@ otgevents:legalEvents rdf:type skos:Collection;
     skos:member otgevents:criminalAction;
     skos:member otgevents:dowry;
     skos:member otgevents:freedomPetition;
-    skos:member otgevents:manumissionRegister;
+    skos:member otgevents:manumissionRegistration;
     skos:member otgevents:probate;
     skos:member otgevents:removalHearing;
     skos:member otgevents:taxFiling;
@@ -309,8 +309,8 @@ otgevents:freedomPetition rdf:type skos:Concept;
     skos:definition "A legal petition from an enslaved person claiming their freedom rights"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:manumissionRegister rdf:type skos:Concept;
-    skos:prefLabel "Manumission register"@en ;
+otgevents:manumissionRegistration rdf:type skos:Concept;
+    skos:prefLabel "Manumission registration"@en ;
     skos:definition "A legal filing that registers the freeing of an enslaved person"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
