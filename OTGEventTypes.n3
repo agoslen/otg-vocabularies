@@ -220,7 +220,7 @@ otgevents:laborEvents rdf:type skos:Collection;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:labor;
     skos:member otgevents:agriculture;
-    skos:member otgevents:artisinal;
+    skos:member otgevents:artisanal;
     skos:member otgevents:domestic;
     skos:member otgevents:midwifery;
     skos:member otgevents:sexWork;
@@ -239,7 +239,7 @@ otgevents:agriculture rdf:type skos:Concept;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:artisinal rdf:type skos:Concept;
-    skos:prefLabel "Artisinal"@en ;
+    skos:prefLabel "Artisanal"@en ;
     skos:definition "An event in which a person participates in labor that requires specialized knowledge and experience, e.g. carpentry, blacksmithing, tailoring, shoemaking"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
