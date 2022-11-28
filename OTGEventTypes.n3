@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 #
-# Version 0.9.3, updated August 29, 2022
+# Version 0.9.4, updated November 10, 2022
 # 
 
 <https://onthesegrounds.org/vocab/event-types#> rdf:type skos:ConceptScheme;
@@ -17,6 +17,7 @@ otgevents:eventType rdf:type skos:Collection ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:topConceptOf <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:commercialTransfreedomEvents ;
+    skos:member otgevents:communicationEvents ;
     skos:member otgevents:educationEvents ;
     skos:member otgevents:freedomStatusEvents ;
     skos:member otgevents:healthEvents ;
@@ -26,7 +27,6 @@ otgevents:eventType rdf:type skos:Collection ;
     skos:member otgevents:lifeEventEvents ;
     skos:member otgevents:membershipEvents ;
     skos:member otgevents:mentionEvents ;
-    skos:member otgevents:narrativeEvents ;
     skos:member otgevents:provisionEvents ;
     skos:member otgevents:religionEvents ;
     skos:member otgevents:resistanceEvents ;
@@ -38,6 +38,7 @@ otgevents:commercialTransactionEvents rdf:type skos:Collection;
     skos:prefLabel "Commercial Transaction Events"@en;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:commercialTransaction;
+    skos:member otgevents:appraisal;
     skos:member otgevents:enslavedHire;
     skos:member otgevents:enslavedLoan;
     skos:member otgevents:enslavedRental;
@@ -47,6 +48,11 @@ otgevents:commercialTransactionEvents rdf:type skos:Collection;
 otgevents:commercialTransaction rdf:type skos:Concept;
     skos:prefLabel "Commercial Transaction"@en ;
     skos:definition "An event in which an enslaved person is part of a transaction that involves the buying or selling of goods, services, or labor"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:appraisal rdf:type skos:Concept;
+    skos:prefLabel "Appraisal"@en ;
+    skos:definition "An event in which an enslaved person is reviewed and assigned a monetary value, often in anticipation of sale"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:enslavedHire rdf:type skos:Concept;
@@ -69,6 +75,40 @@ otgevents:smallGoods rdf:type skos:Concept;
     skos:definition "An event in which an enslaved person is buying or selling small goods (crafts, foodstuffs, etc.)"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> .
 
+
+otgevents:communicationEvents rdf:type skos:Collection;
+    skos:prefLabel "Communication Events"@en;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
+    skos:member otgevents:communication;
+    skos:member otgevents:autobiography;
+    skos:member otgevents:correspondence;
+    skos:member otgevents:testimony.
+
+# Depricated November 10, 2022 v.0.9.4
+# otgevents:narrative rdf:type skos:Concept;
+#   skos:prefLabel "Narrative"@en ;
+#    skos:definition "An event in which an enslaved person tells their own story"@en ;
+#    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:communication rdf:type skos:Concept;
+    skos:prefLabel "Communication"@en ;
+    skos:definition "An event in which an enslaved person imparts or exchanges information with another person."@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:autobiography rdf:type skos:Concept;
+    skos:prefLabel "Autobiography"@en ;
+    skos:definition "An instance in which an enslaved person relates or writes their life story"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:correspondence rdf:type skos:Concept;
+    skos:prefLabel "Correspondence"@en ;
+    skos:definition "An event in which an enslaved person receives or sends a note or letter"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:testimony rdf:type skos:Concept;
+    skos:prefLabel "Testimony"@en ;
+    skos:definition "An instance in which an enslaved person relates or writes an account of an event or circumstances"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:educationEvents rdf:type skos:Collection;
     skos:prefLabel "Education Events"@en;
@@ -274,19 +314,25 @@ otgevents:legalEvents rdf:type skos:Collection;
     skos:prefLabel "Legal Events"@en;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:member otgevents:legal;
+    skos:member otgevents:agreement;
     skos:member otgevents:civilAction;
     skos:member otgevents:criminalAction;
     skos:member otgevents:dowry;
     skos:member otgevents:freedomPetition;
     skos:member otgevents:manumissionRegistration;
     skos:member otgevents:probate;
-    skos:member otgevents:removalHearing;
+    skos:member otgevents:removalRegistration;
     skos:member otgevents:taxFiling;
     skos:member otgevents:will.
 
 otgevents:legal rdf:type skos:Concept;
     skos:prefLabel "Legal"@en ;
     skos:definition "An event that involves a legal filing or proceeding related to an enslaved person"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:agreement rdf:type skos:Concept;
+    skos:prefLabel "Agreement"@en ;
+    skos:definition "An event in which two parties come to an agreement with respect an enslaved person that is articulated in an official document"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:civilAction rdf:type skos:Concept;
@@ -319,9 +365,9 @@ otgevents:probate rdf:type skos:Concept;
     skos:definition "A legal filing that provides an accounting of a person’s estate after their death"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
-otgevents:removalHearing rdf:type skos:Concept;
-    skos:prefLabel "Removal Hearing"@en ;
-    skos:definition "A legal hearing required for the removal of an enslaved person from their home state to another state"@en ;
+otgevents:removalRegistration rdf:type skos:Concept;
+    skos:prefLabel "Removal Registration"@en ;
+    skos:definition "A legal filing that registers the removal of an enslaved person from their home state to another state"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:taxFiling rdf:type skos:Concept;
@@ -425,29 +471,6 @@ otgevents:disappearance rdf:type skos:Concept;
 otgevents:inventory rdf:type skos:Concept;
     skos:prefLabel "Inventory"@en ;
     skos:definition "An event in which an enslaved person is recorded in a list of enslaved people or other property (excluding legal documents)"@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
-
-
-otgevents:narrativeEvents rdf:type skos:Collection;
-    skos:prefLabel "Narrative Events"@en;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
-    skos:member otgevents:narrative;
-    skos:member otgevents:autobiography;
-    skos:member otgevents:testimony.
-
-otgevents:narrative rdf:type skos:Concept;
-    skos:prefLabel "Narrative"@en ;
-    skos:definition "An event in which an enslaved person tells their own story"@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
-
-otgevents:autobiography rdf:type skos:Concept;
-    skos:prefLabel "Autobiography"@en ;
-    skos:definition "An instance in which an enslaved person relates or writes their life story"@en ;
-    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
-
-otgevents:testimony rdf:type skos:Concept;
-    skos:prefLabel "Testimony"@en ;
-    skos:definition "An instance in which an enslaved person relates or writes an account of an event or circumstances"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 

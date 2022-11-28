@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Version 0.9.3, updated August 29, 2022
+# Version 0.9.4, updated November 10, 2022
 # 
 
 #
@@ -82,6 +82,26 @@
     rdfs:label "Same As"@en ;
     rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en ;
     owl:equivalentProperty schema:sameAs .
+
+:parentOf a rdf:Property ;
+    rdfs:label "Parent of"@en ;
+    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
+    owl:equivalentProperty rel:parentOf .
+
+:grandparentOf a rdf:Property ;
+    rdfs:label "Grandparent of"@en ;
+    rdfs:comment "A person who is the child of the person being described’s child."@en ;
+    owl:equivalentProperty rel:grandparentOf .
+
+:siblingOf a rdf:Property ;
+    rdfs:label "Sibling of"@en ;
+    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
+    owl:equivalentProperty rel:siblingOf .
+
+:spouseOf a rdf:Property ;
+    rdfs:label "Spouse of"@en ;
+    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
+    owl:equivalentProperty rel:spouseOf .    
 
 
 #
@@ -344,26 +364,6 @@
     rdfs:comment "Skills of trade of the person being described."@en ;
     owl:equivalentProperty schema:hasOccupation ;
     rdfs:range :Occupation .
-    
-:parentOf a rdf:Property ;
-    rdfs:label "Parent of"@en ;
-    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
-    owl:equivalentProperty rel:parentOf .
-
-:grandparentOf a rdf:Property ;
-    rdfs:label "Grandparent of"@en ;
-    rdfs:comment "A person who is the child of the person being described’s child."@en ;
-    owl:equivalentProperty rel:grandparentOf .
-
-:siblingOf a rdf:Property ;
-    rdfs:label "Sibling of"@en ;
-    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
-    owl:equivalentProperty rel:siblingOf .
-
-:spouseOf a rdf:Property ;
-    rdfs:label "Spouse of"@en ;
-    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
-    owl:equivalentProperty rel:spouseOf .
 
 :foundingLocation a rdf:Property ;
     rdfs:label "Place of Origin"@en ;
@@ -405,6 +405,10 @@
     rdfs:label "Country"@en ;
     rdfs:comment "The verbatim name of the nation where the place being described is located."@en ;
     owl:equivalentProperty schema:addressCountry .
+
+:county-parish a rdf:Property ;
+    rdfs:label "County or Parish"@en ;
+    rdfs:comment "The name of the county or parish where the place being described is located."@en .
 
 :placeType a rdf:Property ;
     rdfs:label "Place Type"@en ;
