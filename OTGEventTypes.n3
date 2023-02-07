@@ -16,7 +16,7 @@ otgevents:eventType rdf:type skos:Collection ;
     skos:prefLabel "Event Type"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#> ;
     skos:topConceptOf <https://onthesegrounds.org/vocab/event-types#> ;
-    skos:member otgevents:commercialTransfreedomEvents ;
+    skos:member otgevents:commercialTransactionEvents ;
     skos:member otgevents:communicationEvents ;
     skos:member otgevents:educationEvents ;
     skos:member otgevents:freedomStatusEvents ;
