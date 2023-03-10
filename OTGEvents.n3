@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Version 0.9.4, updated November 10, 2022
+# Version 1.0 RC, March 10, 2023
 # 
 
 #
@@ -83,26 +83,6 @@
     rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en ;
     owl:equivalentProperty schema:sameAs .
 
-:parentOf a rdf:Property ;
-    rdfs:label "Parent of"@en ;
-    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
-    owl:equivalentProperty rel:parentOf .
-
-:grandparentOf a rdf:Property ;
-    rdfs:label "Grandparent of"@en ;
-    rdfs:comment "A person who is the child of the person being described’s child."@en ;
-    owl:equivalentProperty rel:grandparentOf .
-
-:siblingOf a rdf:Property ;
-    rdfs:label "Sibling of"@en ;
-    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
-    owl:equivalentProperty rel:siblingOf .
-
-:spouseOf a rdf:Property ;
-    rdfs:label "Spouse of"@en ;
-    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
-    owl:equivalentProperty rel:spouseOf .    
-
 
 #
 # Properties for Event Records
@@ -132,15 +112,25 @@
     rdfs:label "Date Certainty"@en ;
     rdfs:comment "An indicator of the confidence certainty of the date."@en .
 
-:cause a rdf:Property ;
-    rdfs:label "Cause"@en ;
-    rdfs:comment "The reason precipitating the event."@en ;
-    owl:equivalentProperty bio:InitiatingEvent .
+# :cause a rdf:Property ; Depricated
+#   rdfs:label "Cause"@en ;
+#    rdfs:comment "The reason precipitating the event."@en ;
+#    owl:equivalentProperty bio:InitiatingEvent .
 
-:result a rdf:Property ;
-    rdfs:label "Outcome"@en ;
-    rdfs:comment "The result produced by an event."@en ;
-    owl:equivalentProperty schema:result .
+# :result a rdf:Property ;
+#   rdfs:label "Outcome"@en ;
+#    rdfs:comment "The result produced by an event."@en ;
+#   owl:equivalentProperty schema:result .
+
+:precedingEvent a rdf:Property ;
+    rdfs:label "Preceding Event"@en ;
+    rdfs:comment "A significant event that preceded the one being described."@en ;
+    owl:equivalentProperty bio:precedingEvent .
+ 
+ :followingEvent a rdf:Property ;
+    rdfs:label "Following Event"@en ;
+    rdfs:comment "A significant event that occurred after the one being described."@en ;
+    owl:equivalentProperty bio:followingEvent .
 
 :source a rdf:Property ;
     rdfs:label "Source"@en ;
@@ -150,7 +140,7 @@
 :relatedEvent a rdf:Property ;
     rdfs:label "Related Event"@en ;
     rdfs:comment "An event that is related to the one being described."@en ;
-    rdfs:subPropertyOf dcterms:relation.
+    rdfs:subPropertyOf dcterms:relation .
 
 #
 # Properties Describing the Principal Participant
@@ -222,6 +212,29 @@
     rdfs:label "Hirer"@en ;
     rdfs:comment "The person or organization hiring enslaved labor."@en .
 
+:parent a rdf:Property ;
+    rdfs:label "Parent"@en ;
+    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
+    owl:equivalentProperty bio:parent .
+
+:child a rdf:Property ;
+    rdfs:label "Child"@en ;
+    rdfs:comment "A person who is the biological or social parent of the primary participant."@en ;
+    owl:equivalentProperty bio:child .
+
+:grandparent a rdf:Property ;
+    rdfs:label "Grandparent"@en ;
+    rdfs:comment "A person who is the child of the person being described’s child."@en .
+
+:sibling a rdf:Property ;
+    rdfs:label "Sibling"@en ;
+    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
+    owl:equivalentProperty schema:sibling .
+
+:partner a rdf:Property ;
+    rdfs:label "Partner"@en ;
+    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
+    owl:equivalentProperty bio:partner .    
 
 :perpetrator a rdf:Property ;
     rdfs:label "Perpetrator"@en ;
@@ -370,12 +383,36 @@
     rdfs:comment "The general homeland for the person being described."@en ;
     owl:equivalentProperty schema:foundingLocation .
 
+:placeOfSignificance a rdf:Property '
+    rdfs:label "Place of Significance"@en ;
+    rdfs:comment "A place, other than the homeland, that is important to the life of the person being described."@en ;
+    owl:equivalentProperty dcterms:spatial
+
 :ethnolinguisticDescriptor a rdf:Property ;
     rdfs:label "Ethnolinguistic Descriptor"@en ;
     rdfs:comment "The commonly used language of the person being described."@en ;
     owl:equivalentProperty schema:knowsLanguage ;
     rdfs:range :EthnolinguisticDescriptor .
 
+:parentOf a rdf:Property ;
+    rdfs:label "Parent of"@en ;
+    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
+    owl:equivalentProperty rel:parentOf .
+
+:grandparentOf a rdf:Property ;
+    rdfs:label "Grandparent of"@en ;
+    rdfs:comment "A person who is the child of the person being described’s child."@en ;
+    owl:equivalentProperty rel:grandparentOf .
+
+:siblingOf a rdf:Property ;
+    rdfs:label "Sibling of"@en ;
+    rdfs:comment "A person who shares one or more parents with the person being described, or who has been adopted into a family."@en ;
+    owl:equivalentProperty rel:siblingOf .
+
+:spouseOf a rdf:Property ;
+    rdfs:label "Spouse of"@en ;
+    rdfs:comment "The person being described’s long term intimate partner, joined in an officially recognized marriage or in an informal bond."@en ;
+    owl:equivalentProperty rel:spouseOf .    
 
 
 #

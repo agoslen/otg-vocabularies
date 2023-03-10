@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 #
-# Version 0.9.4, updated November 10, 2022
+# Version 1.0 RC, updated March 10, 2023
 # 
 
 <https://onthesegrounds.org/vocab/event-types#> rdf:type skos:ConceptScheme;
@@ -332,7 +332,7 @@ otgevents:legal rdf:type skos:Concept;
 
 otgevents:agreement rdf:type skos:Concept;
     skos:prefLabel "Agreement"@en ;
-    skos:definition "An event in which two parties come to an agreement with respect an enslaved person that is articulated in an official document"@en ;
+    skos:definition "An event in which two parties come to an agreement with respect to an enslaved person that is articulated in an official document"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:civilAction rdf:type skos:Concept;
@@ -717,6 +717,7 @@ otgevents:violenceEvents rdf:type skos:Collection;
     skos:member otgevents:capture;
     skos:member otgevents:harassment;
     skos:member otgevents:jailing;
+    skos:member otgevents:medicalExperiementation;
     skos:member otgevents:physicalAssault;
     skos:member otgevents:postmortemAbuse;
     skos:member otgevents:punishment;
@@ -740,6 +741,11 @@ otgevents:harassment rdf:type skos:Concept;
 otgevents:jailing rdf:type skos:Concept;
     skos:prefLabel "Jailing"@en ;
     skos:definition "An event in which an enslaved person is confined by the state or a municipal authority for some wrongdoing or transgression"@en ;
+    skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
+
+otgevents:medicalExperiementatoin rdf:type skos:Concept;
+    skos:prefLabel "Medical Experimentation"@en ;
+    skos:definition "An event in which an enslaved person is subject to treatment that has the goal of developing an effective treatment for a medical condition or to further scientific research"@en ;
     skos:inScheme <https://onthesegrounds.org/vocab/event-types#>.
 
 otgevents:jailing rdf:type skos:Concept;
