@@ -383,10 +383,10 @@
     rdfs:comment "The general homeland for the person being described."@en ;
     owl:equivalentProperty schema:foundingLocation .
 
-:placeOfSignificance a rdf:Property '
+:placeOfSignificance a rdf:Property  ;
     rdfs:label "Place of Significance"@en ;
     rdfs:comment "A place, other than the homeland, that is important to the life of the person being described."@en ;
-    owl:equivalentProperty dcterms:spatial
+    owl:equivalentProperty dcterms:spatial .
 
 :ethnolinguisticDescriptor a rdf:Property ;
     rdfs:label "Ethnolinguistic Descriptor"@en ;
@@ -418,6 +418,7 @@
 #
 # Properties for Place Records
 #
+
 :latitude a rdf:Property ;
     rdfs:label "Latitude"@en ;
     rdfs:comment "The latitude given to a location."@en ;
