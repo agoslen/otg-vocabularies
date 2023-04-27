@@ -214,17 +214,17 @@
 
 :parent a rdf:Property ;
     rdfs:label "Parent"@en ;
-    rdfs:comment "A person who is the biological or social child of the person being described."@en ;
+    rdfs:comment "A person who is the biological or social parent of the person being described."@en ;
     owl:equivalentProperty bio:parent .
 
 :child a rdf:Property ;
     rdfs:label "Child"@en ;
-    rdfs:comment "A person who is the biological or social parent of the primary participant."@en ;
+    rdfs:comment "A person who is the biological or social child of the primary participant."@en ;
     owl:equivalentProperty bio:child .
 
 :grandparent a rdf:Property ;
     rdfs:label "Grandparent"@en ;
-    rdfs:comment "A person who is the child of the person being described’s child."@en .
+    rdfs:comment "A person who is the parent of the person being described’s parent."@en .
 
 :sibling a rdf:Property ;
     rdfs:label "Sibling"@en ;
@@ -394,10 +394,20 @@
     owl:equivalentProperty schema:knowsLanguage ;
     rdfs:range :EthnolinguisticDescriptor .
 
+:childOf a rdf:Property ;
+    rdfs:label "Child of"@en ;
+    rdfs:comment "A person who is the biological or social parent of the person being described."@en ;
+    owl:equivalentProperty rel:childOf .
+
 :parentOf a rdf:Property ;
     rdfs:label "Parent of"@en ;
     rdfs:comment "A person who is the biological or social child of the person being described."@en ;
     owl:equivalentProperty rel:parentOf .
+
+:grandchildOf a rdf:Property ;
+    rdfs:label "Grandchild of"@en ;
+    rdfs:comment "A person who is the parent of the person being described’s parent."@en ;
+    owl:equivalentProperty rel:grandchildOf .
 
 :grandparentOf a rdf:Property ;
     rdfs:label "Grandparent of"@en ;
