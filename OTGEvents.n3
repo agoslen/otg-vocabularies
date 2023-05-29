@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
-# Version 1.0 RC, March 10, 2023
+# Version 1.1, May 29, 2023
 # 
 
 #
@@ -44,7 +44,7 @@
     owl:equivalentProperty dcterms:description .
 
 :bibliographicCitation a rdf:Property ;
-    rdfs:label "BibliographicCitation"@en ;
+    rdfs:label "Bibliographic Citation"@en ;
     rdfs:comment "A bibliographic reference for the resource."@en ;
     owl:equivalentProperty dcterms:bibliographicCitation .
 
