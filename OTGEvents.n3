@@ -379,8 +379,8 @@
     rdfs:range :Occupation .
 
 :foundingLocation a rdf:Property ;
-    rdfs:label "Place of Origin"@en ;
-    rdfs:comment "The general homeland for the person being described."@en ;
+    rdfs:label "Birth Place"@en ;
+    rdfs:comment "The birth place of the person being described."@en ;
     owl:equivalentProperty schema:foundingLocation .
 
 :placeOfSignificance a rdf:Property  ;
