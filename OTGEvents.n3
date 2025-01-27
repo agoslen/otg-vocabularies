@@ -29,6 +29,10 @@
     rdfs:label "Location"@en ;
     rdfs:comment "A spatial region or named place."@en .
 
+:Document a rdfs:Class ;
+    rdfs:label "Document"@en ;
+    rdfs:comment "A digitized archival document from which the record information is drawn."@en .
+
 #
 # Properties Shared by Multiple Record Types
 #
