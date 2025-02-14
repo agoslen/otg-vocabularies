@@ -164,7 +164,7 @@
     rdfs:comment "An indication of the freedom status of the primary participant in the event."@en .
 
 :enslaver a rdf:Property ;
-    rdfs:label "Enslaver"@en ;
+    rdfs:label "Enslaved By"@en ;
     rdfs:comment "The person or institution responsible for holding in slavery the primary particpant in the event."@en .
 
 :age a rdf:Property ;
